@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+	
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-capacities.xsd" />
+	<include schemaLocation="A661Part2-treePrimitives.xsd" />
+
+	<annotation>
+		<documentation xml:lang="en">This Schema defines the TextPrimitive available in ARINC 661 Part 2</documentation>
+	</annotation>
+
+	<complexType name="SimpleTextPrimitive">
+		<sequence>
+			<!-- TODO : add a default value for wordSeparator -->
+			<element name="wordSeparator" type="tns:CharacterType" minOccurs="0" maxOccurs="unbounded" />
+			<group ref="tns:DecorationCapacities"/>
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" 			/>
+		<attributeGroup ref="tns:GraphicsCapacities"		/>
+		<attributeGroup ref="tns:FilterCapacities" 			/>
+		<attributeGroup ref="tns:TextBasicAttributesGroup"	/>
+		<attributeGroup ref="tns:MultilineGroup"		/>
+		<attributeGroup ref="tns:TextFlowGroup"				/>
+		<attributeGroup ref="tns:TextAlignement"			/>
+		<attributeGroup ref="tns:TextFillGroup"				/>
+		<!-- fontFamily, fontStyle, fontVariant, fontWeight, fontStretch are not in the actual specification -->
+		<!-- <attribute name="fontFamily" 	type="tns:StringType" 	use="required" 		/> -->
+		<!-- <attribute name="fontStyle" 	type="tns:StringType" 	default="normal" 	/> -->
+		<!-- <attribute name="fontVariant" 	type="tns:StringType" 	default="normal" 	/> -->
+		<!-- <attribute name="fontWeight" 	type="tns:StringType" 	default="normal" 	/> -->
+		<!-- <attribute name="fontStretch" 	type="tns:StringType" 	default="normal" 	/> -->
+	</complexType>
+	
+	<attributeGroup name="TextBasicAttributesGroup">
+		<attribute name="x" 			type="tns:PositionType" default="0" 	/>
+		<attribute name="y" 			type="tns:PositionType" default="0" 	/>
+		<attribute name="width" 		type="tns:DistanceType" default="0" 	/>
+		<attribute name="height" 		type="tns:DistanceType" default="0" 	/>
+		<attribute name="fontName"	 	type="tns:StringType" 	default="Arial" />
+		<attribute name="fontSize" 		type="tns:DistanceType" default="15" 	/>
+		<attribute name="value" 		type="tns:StringType" 	use="required" 	/>
+		<!-- TODO : lineGap has a default value of (ascender + descender) -->
+		<attribute name="lineGap" 		type="tns:DistanceType" />
+	</attributeGroup>
+	
+	<attributeGroup name="MultilineGroup">
+		<attribute name="multilineMode" default="preserveCharacter">
+			<simpleType>
+				<restriction base="tns:StringType">
+					<enumeration value="preserveCharacter"				/>
+					<enumeration value="preserveCharacterAndAdvance"	/>
+					<enumeration value="preserveWord"					/>
+					<enumeration value="preserveWordAndAdvance"			/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</attributeGroup>
+	
+	<attributeGroup name="TextFlowGroup">
+		<attribute name="flowDirection" default="right">
+			<simpleType>
+				<restriction base="tns:StringType">
+					<enumeration value="right"/>
+					<enumeration value="left"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="textFlow" default="none">
+			<simpleType>
+				<restriction base="tns:StringType">
+					<enumeration value="none"/>
+					<enumeration value="clip"/>
+					<enumeration value="multiline"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</attributeGroup>
+	
+	<attributeGroup name="TextAlignement">
+		<attribute name="alignment" default="leftOnly" >
+			<simpleType >
+				<restriction base="tns:StringType">
+					<enumeration value="topLeft"/>
+					<enumeration value="centerLeft"/>
+					<enumeration value="bottomLeft"/>
+					<enumeration value="topCenter"/>
+					<enumeration value="center"/>
+					<enumeration value="bottomCenter"/>
+					<enumeration value="topRight"/>
+					<enumeration value="centerRight"/>
+					<enumeration value="bottomRight"/>
+					<enumeration value="leftOnly"/>
+					<enumeration value="rightOnly"/>
+					<enumeration value="centerOnly"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</attributeGroup>
+	
+	<attributeGroup name="TextFillGroup">
+		<attribute name="fill" 				type="tns:ColorType" 	default="white"	/>
+		<attribute name="fillOpacity" 		type="tns:OpacityType" 	default="1.0"	/>
+		<attribute name="backgroundColor"	type="tns:ColorType" 	default="white"	/>
+		<attribute name="backgroundOpacity" type="tns:OpacityType" 	default="1.0"	/>
+	</attributeGroup>
+
+</schema>

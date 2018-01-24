@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+ Copyright (c) 2015, 2018 Airbus and the NG661designer project contributors.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ Contributors:
+     Obeo - initial API and implementation
+-->
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated NG661Part2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.polarsys.ng661designer.part2.presentation.Part2ModelWizardID"
+            name="%_UI_Part2ModelWizard_label"
+            class="org.polarsys.ng661designer.part2.presentation.Part2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Part2ModelFile.gif">
+         <description>%_UI_Part2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated NG661Part2 -->
+      <editor
+            id="org.polarsys.ng661designer.part2.presentation.Part2EditorID"
+            name="%_UI_Part2Editor_label"
+            icon="icons/full/obj16/Part2ModelFile.gif"
+            extensions="part2"
+            class="org.polarsys.ng661designer.part2.presentation.Part2Editor"
+            contributorClass="org.polarsys.ng661designer.part2.presentation.Part2ActionBarContributor">
+      </editor>
+   </extension>
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated NG661Part2 -->
+      <editor
+            id="org.w3._2005._07.scxml.presentation.ScxmlEditorID"
+            name="%_UI_ScxmlEditor_label"
+            icon="icons/full/obj16/ScxmlModelFile.gif"
+            extensions="scxml"
+            class="org.w3._2005._07.scxml.presentation.ScxmlEditor"
+            contributorClass="org.w3._2005._07.scxml.presentation.ScxmlActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

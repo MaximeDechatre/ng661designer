@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+	
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-capacities.xsd" />
+	<include schemaLocation="A661Part2-treePrimitives.xsd" />
+	<include schemaLocation="A661Part2-transformType.xsd" />
+
+	<annotation>
+		<documentation xml:lang="en">This Schema defines all the graphical containers available in ARINC 661 Part 2.</documentation>
+	</annotation>
+	
+	<complexType name="GroupPrimitive">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<group ref="tns:ChildElements" />
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" 		/>
+		<attributeGroup ref="tns:GraphicsCapacities" 	/>
+		<attribute name="tx" type="tns:PositionType" default="0" />
+		<attribute name="ty" type="tns:PositionType" default="0" />
+	</complexType>	
+	
+	<complexType name="TransformGroupPrimitive">
+		<sequence>
+			<element name="transform" type="tns:TransformType" minOccurs="0" maxOccurs="1"/>
+			<group ref="tns:ChildElements" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" 		/>
+		<attributeGroup ref="tns:GraphicsCapacities" 	/>
+	</complexType>		
+	
+	<complexType name="ReplicatePrimitive">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<group ref="tns:ChildElements" />
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" 		/>
+		<attributeGroup ref="tns:GraphicsCapacities" 	/>
+		<attribute name="datamodel" 			type="tns:NameType" 	/>
+		<attribute name="instanceAlias" 		type="tns:NameType" 	/>
+		<attribute name="indexAlias" 			type="tns:NameType" 	/>
+		<attribute name="firstIndex" 			type="tns:IntegerType"	/>
+		<attribute name="numberOfInstance" 		type="tns:IntegerType" 	/>
+		<attribute name="maxNumberOfInstance"	type="tns:IntegerType" 	/>
+	</complexType>	
+
+	<complexType name="ChildPrimitive">
+		<sequence>
+			<element name="transform" type="tns:TransformType" minOccurs="0" maxOccurs="1"/>
+			<group ref="tns:ChildElements" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attribute name="InstantiationMode" default="Anonymous" >
+			<simpleType>
+				<restriction base="tns:StringType">
+					<enumeration value="Anonymous"/>
+					<enumeration value="Grouped"/>
+					<enumeration value="InsertChildrenNode"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+		<!-- priority and maxNumberOfChildren are not in the actual specification -->
+		<!-- <attribute name="priority" 				type="tns:IntegerType"	default="0" /> -->
+		<!-- <attribute name="maxNumberOfChildren" 	type="tns:IntegerType"	default="0" /> -->
+	</complexType>		
+	
+	<complexType name="SwitchNodePrimitive">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<group ref="tns:ChildElements" />
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attribute name="activeChild" type="tns:NameType" />
+	</complexType>
+	
+	<complexType name="ClippingContainerPrimitive">
+		<sequence>
+			<element name="ClipPath" type="tns:ClipPathPrimitive"/>
+			<group ref="tns:ChildElements" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+	</complexType>
+
+	<complexType name="ClipPathPrimitive">
+		<choice minOccurs="1" maxOccurs="unbounded">
+			<element name="Rectangle"	type="tns:RectPrimitive" />
+			<element name="Circle"		type="tns:CirclePrimitive" />
+			<element name="Ellipse"		type="tns:EllipsePrimitive" />
+			<element name="Line"		type="tns:LinePrimitive" />
+			 <!--  TODO : find a mean to check if a path is closed  -->
+			<element name="ClosedPath"	type="tns:PathPrimitive" />
+		</choice>
+		<!-- It could be relevant to have a RuleType for both ClipRule and FillRule -->
+		<attribute name="clipRule" default="nonzero" >
+			<simpleType>
+				<restriction base="tns:StringType">
+					<enumeration value="nonzero" />
+					<enumeration value="evenodd" />
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+</schema>

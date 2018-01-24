@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/A661Part2" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+
+	<include schemaLocation="A661Part2-treePrimitives.xsd" />
+    <include schemaLocation="A661Part2-import.xsd" />
+    <include schemaLocation="A661Part2-properties.xsd" />
+    <include schemaLocation="A661Part2-interactivity.xsd" />
+
+	<annotation>
+		<documentation>This schema defines the Tree sub-section of A661 Part 2 language. Tree is the new name for the Representation sub-section.</documentation>
+	</annotation>
+	
+	<complexType name="TreeType">
+        <annotation>
+        	<documentation>TO DO</documentation>
+        </annotation>
+		<sequence minOccurs="1" maxOccurs="unbounded">
+            <element name="Import" type="tns:ImportType" minOccurs="0" maxOccurs="unbounded"/>
+            <!-- <element name="Style" type="???" minOccurs="0" maxOccurs="unbounded"/> --> <!--  TODO : Style attribute is not clearly defined  -->
+			<group ref="tns:MemberComponentGroup"  minOccurs="1" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	
+	<group name="MemberComponentGroup">
+		<choice>
+			<group ref="tns:GraphicPrimitives" 		/>
+			<group ref="tns:GraphicBasicComponents"	/>
+			<group ref="tns:InteractionPrimitives" 	/>
+			<element name="Clock" type="tns:ClockType" />
+			<any namespace="##other" processContents="lax" />
+		</choice>
+	</group>
+
+</schema>

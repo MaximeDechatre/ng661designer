@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+
+	<include schemaLocation="A661Part2-types.xsd" />
+	
+	<complexType name="TransformType">
+		<sequence>
+			<group ref="tns:TransformTypeGroup" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	
+	<group name="TransformTypeGroup">
+		<choice>
+			<element name="TransformMatrix"		type="tns:TransformMatrixType"		/>
+			<element name="TransformTranslate"	type="tns:TransformTranslateType"	/>
+			<element name="TransformScale"		type="tns:TransformScaleType" 		/>
+			<element name="TransformRotate"		type="tns:TransformRotateType" 		/>
+			<element name="TransformSkewX"		type="tns:TransformSkewXType" 		/>
+			<element name="TransformSkewY"		type="tns:TransformSkewYType" 		/>
+		</choice>
+	</group>
+	
+	<complexType name="TransformMatrixType">
+		<attribute name="a" type="tns:RealType"/>
+		<attribute name="b" type="tns:RealType"/>
+		<attribute name="c" type="tns:RealType"/>
+		<attribute name="d" type="tns:RealType"/>
+		<attribute name="e" type="tns:RealType"/>
+		<attribute name="f" type="tns:RealType"/>
+	</complexType>
+	
+	<complexType name="TransformTranslateType">
+		<attribute name="tx" type="tns:PositionType"/>
+		<attribute name="ty" type="tns:PositionType"/>
+	</complexType>
+	
+	<complexType name="TransformScaleType">
+		<attribute name="sx" type="tns:PositionType"/>
+		<attribute name="sy" type="tns:PositionType"/>
+	</complexType>
+	
+	<complexType name="TransformRotateType">
+		<attribute name="angle" type="tns:AngleType"/>
+		<attribute name="cx" 	type="tns:PositionType"/>
+		<attribute name="cy" 	type="tns:PositionType"/>
+	</complexType>
+	
+	<complexType name="TransformSkewXType">
+		<attribute name="angle" type="tns:AngleType"/>
+	</complexType>
+	
+	<complexType name="TransformSkewYType">
+		<attribute name="angle" type="tns:AngleType"/>
+	</complexType>
+	
+</schema>

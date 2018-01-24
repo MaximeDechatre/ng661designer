@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/A661Part2" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+    
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-definitions.xsd" />
+    <include schemaLocation="A661Part2-import.xsd" />
+    <include schemaLocation="A661Part2-properties.xsd" />
+    <include schemaLocation="A661Part2-interactivity.xsd" />
+    
+	<annotation>
+		<documentation>This schema defines the Interface sub-section of A661 Part 2 language.</documentation>
+	</annotation>
+
+	<complexType name="InterfaceType">
+		<sequence>
+			<group ref="tns:InterfaceGroup"  minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+	</complexType>
+	
+	<group name="InterfaceGroup">
+		<choice>
+            <element name="Import"         	type="tns:ImportType" 			/>
+			<element name="Property"   		type="tns:PropertyType"   		/>
+			<element name="ArrayProperty"   type="tns:ArrayPropertyType"   	/>
+			<element name="StructProperty"  type="tns:StructPropertyType"	/>
+			<element name="EnumProperty"   	type="tns:PropertyType"   		/>
+			<element name="UnionProperty"   type="tns:UnionPropertyType"	/>
+			<element name="Event"      		type="tns:EventType"      		/>
+			<element name="ArrayEvent"      type="tns:ArrayEventType"   	/>
+			<element name="StructEvent"     type="tns:StructEventType"  	/>
+			<element name="EnumEvent"      	type="tns:EventType" 			/>
+			<element name="UnionEvent"      type="tns:UnionEventType" 		/>
+			<element name="Operation"   	type="tns:OperationType" 		/> <!--  TODO : check type  -->
+			<element name="PublicFunction"  type="tns:FunctionType" 		/> <!--  TODO : check type  -->
+		</choice>
+	</group>
+	
+</schema>

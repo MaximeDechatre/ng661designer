@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+
+	<annotation>
+		<documentation xml:lang="en">This Schema defines the
+			declaration of a complex type property for ARINC 661 Part 2
+		</documentation>
+	</annotation>
+	
+	<annotation>
+		<documentation xml:lang="en">To define a new field
+			value consists of defining the name of the field and its value.
+			If the type of this field is complex also, a sequence of field and/or
+			array shall be set instead of the value (not checked).
+		</documentation>
+	</annotation>
+	<complexType name="FieldType">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<element name="Field" type="tns:FieldType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="Array" type="tns:ArrayType" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="name" type="string" use="required" />
+		<attribute name="defaultValue" type="string" use="optional" />
+	</complexType>
+
+	<annotation>
+		<documentation xml:lang="en">To define the value for a
+			new entry of an array consists of defining optionally the index of
+			the entry and the value for simple type.
+			If the type of this entry is complex also, a sequence of field and/or
+			array shall be set instead of the value (not checked).
+		</documentation>
+	</annotation>
+	<complexType name="EntryType">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<element name="Field" type="tns:FieldType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="Array" type="tns:ArrayType" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="index" type="nonNegativeInteger" use="optional" />
+		<attribute name="defaultValue" type="string" use="optional" />
+	</complexType>
+
+	<annotation>
+		<documentation xml:lang="en">To define the default
+			value for other entries of an array consists of defining the value
+			for simple type.
+			If the type of this entry is complex also, a sequence of field and/or
+			array shall be set instead of the value (not checked).
+		</documentation>
+	</annotation>
+	<complexType name="OtherEntriesType">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<element name="Field" type="tns:FieldType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="Array" type="tns:ArrayType" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+		<attribute name="defaultValue" type="string" use="optional" />
+	</complexType>
+	
+	<group name="ArrayEntriesGroup">
+		<sequence>
+			<element name="Entry" type="tns:EntryType" minOccurs="1" maxOccurs="unbounded">
+				<unique name="EntryFieldID">
+					<selector xpath="tns:Field|tns:Array" />
+					<field xpath="@name" />
+				</unique>
+			</element>
+			<element name="OtherEntries" type="tns:OtherEntriesType" minOccurs="0" maxOccurs="1">
+				<unique name="OtherEntriesFieldID">
+					<selector xpath="tns:Field|tns:Array" />
+					<field xpath="@name" />
+				</unique>
+			</element>
+		</sequence>
+	</group>
+
+	<annotation>
+		<documentation xml:lang="en">To define the entries of
+			an array consists of defining :
+			- the name of the array
+			- the maximum number of entries of the array
+			- the default number of entries of the array
+			- the value for a set of entries and optionally the default value for
+			the entries.
+			If the entry type is complex, each field or array of the complex
+			entries or the default complex entry shall be defined only once.
+		</documentation>
+	</annotation>
+	<complexType name="ArrayType">
+		<group ref="tns:ArrayEntriesGroup"/>
+		<attribute name="name" type="string" use="required" />
+		<attribute name="maxNumberOfEntries" type="integer" use="required" />
+		<attribute name="defaultNumberOfEntries" type="integer" use="optional" />
+	</complexType>
+
+</schema>

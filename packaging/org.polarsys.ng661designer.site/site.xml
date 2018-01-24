@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.polarsys.ng661designer.convert.feature_1.0.0.201603301027.jar" id="org.polarsys.ng661designer.convert.feature" version="1.0.0.201603301027">
+      <category name="NG661Designer"/>
+   </feature>
+   <feature url="features/org.polarsys.ng661designer.feature_1.1.0.201603301027.jar" id="org.polarsys.ng661designer.feature" version="1.1.0.201603301027">
+      <category name="NG661Designer"/>
+   </feature>
+   <category-def name="NG661Designer" label="NG661Designer"/>
+</site>

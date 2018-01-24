@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/A661Part2" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-definitions.xsd" />
+	<include schemaLocation="A661Part2-structureTypes.xsd" />
+
+	<annotation>
+		<documentation xml:lang="en">This Schema defines the Property type and the PrivateProperty type</documentation>
+	</annotation>
+
+	<complexType name="PropertyType">
+		<attributeGroup ref="tns:PropertyAttributesGroup"/>
+		<attributeGroup ref="tns:SimpleElementAttributesGroup"/>
+		<attribute name="maxStringLength" type="integer" use="optional">
+			<annotation>
+				<documentation>Used for strings</documentation>
+			</annotation>
+		</attribute>
+	</complexType>
+
+	<complexType name="PrivatePropertyType">
+		<attributeGroup ref="tns:PrivatePropertyAttributesGroup"/>
+		<attributeGroup ref="tns:SimpleElementAttributesGroup"/>
+		<attribute name="maxStringLength" type="integer" use="optional">
+			<annotation>
+				<documentation>Used for strings</documentation>
+			</annotation>
+		</attribute>
+	</complexType>
+		
+	<attributeGroup name="PropertyAttributesGroup">
+		<attribute name="name" type="tns:NameType" use="required" />
+		<attribute name="type" type="tns:TypeType" use="required" />
+		<attributeGroup ref="tns:ModalityGroup" />
+	</attributeGroup>
+		
+	<attributeGroup name="PrivatePropertyAttributesGroup">
+		<attribute name="name" type="tns:NameType" use="required" />
+		<attribute name="type" type="tns:TypeType" use="required" />
+		<attributeGroup ref="tns:PrivateModalityGroup" />
+	</attributeGroup>
+		
+	<attributeGroup name="ModalityGroup">
+		<attribute name="modality" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="InOut" />
+					<enumeration value="Out" />
+					<enumeration value="In" />
+					<enumeration value="ConstOut" />
+					<enumeration value="ConstIn" />
+				</restriction>
+			</simpleType>
+		</attribute>	
+	</attributeGroup>
+		
+	<attributeGroup name="PrivateModalityGroup">
+		<attribute name="modality" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="Local" />
+					<enumeration value="LocalConst" />
+				</restriction>
+			</simpleType>
+		</attribute>	
+	</attributeGroup>
+	
+	<complexType name="StructPropertyType">
+		<sequence maxOccurs="unbounded">
+			<group ref="tns:StructElementContent"/>
+		</sequence>
+		<attributeGroup ref="tns:PropertyAttributesGroup"/>
+	</complexType>
+	
+	<complexType name="ArrayPropertyType">
+		<group ref="tns:ArrayElementContent"/>
+		<attributeGroup ref="tns:PropertyAttributesGroup"/>
+		<attributeGroup ref="tns:ArrayElementAttributesGroup"/>
+	</complexType>
+	
+	<complexType name="UnionPropertyType">
+		<attributeGroup ref="tns:PropertyAttributesGroup"/>
+		<attributeGroup ref="tns:UnionElementAttributesGroup"/>
+	</complexType>
+	
+</schema>

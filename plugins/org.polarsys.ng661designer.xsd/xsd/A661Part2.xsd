@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/A661Part2" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+	
+    <annotation>
+    	<documentation>This schema defines the structure of an ARINC 661 component.
+    	Open points:
+    	1. base component definition (with default 'id' attribute)
+    	2. how this base definition works from an interface, representation and behavior point of view</documentation>
+	</annotation>
+	
+    <include schemaLocation="A661Part2-definition.xsd" />
+    <include schemaLocation="A661Part2-interface.xsd" />
+	<include schemaLocation="A661Part2-tree.xsd" />
+	<include schemaLocation="A661Part2-behavior.xsd" />
+	
+    <element name="ComponentDefinition" type="tns:ComponentDefinitionType">
+    	<!-- The keyref elements below are not clear -->
+		<!-- <keyref name="StructFieldsKeyRef" refer="tns:FieldsNameKey">
+			<selector xpath=".//tns:Field"/>
+			<field xpath="@name"/>
+		</keyref>   	
+		<keyref name="StructStructFieldsKeyRef" refer="tns:StructFieldsNameKey">
+			<selector xpath=".//tns:StructField"/>
+			<field xpath="@name"/>
+		</keyref>   	
+		<keyref name="StructArrayFieldsKeyRef" refer="tns:ArrayFieldsNameKey">
+			<selector xpath=".//tns:ArrayField"/>
+			<field xpath="@name"/>
+		</keyref>   	
+		<keyref name="StructEnumFieldsKeyRef" refer="tns:EnumFieldsNameKey">
+			<selector xpath=".//tns:EnumField"/>
+			<field xpath="@name"/>
+		</keyref>   	
+		<keyref name="StructUnionFieldsKeyRef" refer="tns:UnionFieldsNameKey">
+			<selector xpath=".//tns:UnionField"/>
+			<field xpath="@name"/>
+		</keyref> -->
+    </element>
+
+	<complexType name="ComponentDefinitionType">
+		<sequence>
+			<element name="Definition"       type="tns:DefinitionType"       minOccurs="0" maxOccurs="1" />
+			<element name="Interface"      type="tns:InterfaceType" >
+				<unique name="InterfaceElementsIDUniqueness">
+					<selector xpath=".//*"/>
+ 					<field xpath="@name"/>
+				</unique>
+			</element>
+			<element name="Tree" type="tns:TreeType" minOccurs="0" maxOccurs="1">
+				<unique name="RepresentationElementsIDUniqueness">
+					<selector xpath=".//*"/>
+ 					<field xpath="@id"/>
+				</unique>
+			</element>
+			<element name="Behavior"       type="tns:BehaviorType"       minOccurs="0" maxOccurs="1" />
+		</sequence>
+		<attribute name="name" type="tns:NameType" use="required" />
+	</complexType>
+
+</schema>

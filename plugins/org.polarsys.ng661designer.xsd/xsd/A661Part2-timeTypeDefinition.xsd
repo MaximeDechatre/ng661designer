@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/A661Part2" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+	
+	<annotation>
+		<documentation>This schema defines the date and time types of A661 Part 2 language.</documentation>
+	</annotation>
+	
+	<simpleType name="Time_hours_Type">
+		<restriction base="string">
+			<pattern value="[+-]?[0-9]*(\.[0-9]*)?(E[+-]?[0-9]?[0-9])?\s*[hH]" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="Time_minutes_Type">
+		<restriction base="string">
+			<pattern value="[+-]?[0-9]*(\.[0-9]*)?(E[+-]?[0-9]?[0-9])?\s*[mM][nN]" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="Time_seconds_or_subseconds_Type">
+		<restriction base="string">
+			<pattern value="[+-]?[0-9]*(\.[0-9]*)?(E[+-]?[0-9]?[0-9])?\s*[mMµ]?[sS]" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="Time_defaultmilliseconds_Type">
+		<restriction base="string">
+			<pattern value="[+-]?[0-9]*(\.[0-9]*)?(E[+-]?[0-9]?[0-9])?" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="TimeType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a time duration. It consists of a real value followed by an optional time unit.
+				The following units are allowed :
+				- h, for hours
+				- mn,
+				for minutes
+				- s, for seconds
+				- ms, for milliseconds
+				- µs, for microseconds
+				If not specified, the default unit is milliseconds.
+
+				The operational range is from 0 second to 1000 years.
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:Time_hours_Type tns:Time_minutes_Type tns:Time_seconds_or_subseconds_Type tns:Time_defaultmilliseconds_Type"/>
+
+
+	</simpleType>
+
+</schema>

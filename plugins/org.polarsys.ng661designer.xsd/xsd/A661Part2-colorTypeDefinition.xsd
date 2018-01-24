@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/A661Part2" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+
+	<annotation>
+		<documentation>This schema defines the color types of A661 Part 2 language.</documentation>
+	</annotation>
+	
+	<simpleType name="ColorRGB_HEX_Type">
+		<restriction base="string">
+			<pattern value="#[0-9a-fA-F][0-9a-fA-F][0-9a-fA-F]([0-9a-fA-F][0-9a-fA-F][0-9a-fA-F])?" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="ColorRGB_rgb255_Type">
+		<restriction base="string">
+			<pattern value="rgb\(\s*([0-9]?[0-9]|[01]?[0-9][0-9]|2[0-4][0-9]|25[0-5])\s*,\s*([0-9]?[0-9]|[01]?[0-9][0-9]|2[0-4][0-9]|25[0-5])\s*,\s*([0-9]?[0-9]|[01]?[0-9][0-9]|2[0-4][0-9]|25[0-5])\s*\)" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="ColorRGB_rgbPercent_Type">
+		<restriction base="string">
+			<pattern value="rgb\(\s*([0-9]?[0-9]|0?[0-9][0-9]|100)\s*%\s*,\s*([0-9]?[0-9]|0?[0-9][0-9]|100)\s*%\s*,\s*([0-9]?[0-9]|0?[0-9][0-9]|100)\s*%\s*\)" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="ColorRGBType">
+		<annotation>
+			<documentation xml:lang="en">
+				The union of all ways to specify a RGB value.
+				Hexadecimal #RGB of #RRGGBB
+				0-255 Decimal : rgb( red , green , blue)
+				0-100 Percentage : rgb( red% , green% , blue%)
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:ColorRGB_rgbPercent_Type tns:ColorRGB_rgb255_Type tns:ColorRGB_HEX_Type" />
+	</simpleType>
+
+	<simpleType name="ColorReferenceType">
+		<annotation>
+			<documentation xml:lang="en">
+				All reference to a predefined CSS/SVG color
+			</documentation>
+		</annotation>
+		<restriction base="string">
+			<enumeration value="aliceblue" />
+			<enumeration value="antiquewhite" />
+			<enumeration value="aqua" />
+			<enumeration value="aquamarine" />
+			<enumeration value="azure" />
+			<enumeration value="beige" />
+			<enumeration value="bisque" />
+			<enumeration value="black" />
+			<enumeration value="blanchedalmond" />
+			<enumeration value="blue" />
+			<enumeration value="blueviolet" />
+			<enumeration value="brown" />
+			<enumeration value="burlywood" />
+			<enumeration value="cadetblue" />
+			<enumeration value="chartreuse" />
+			<enumeration value="chocolate" />
+			<enumeration value="coral" />
+			<enumeration value="cornflowerblue" />
+			<enumeration value="cornsilk" />
+			<enumeration value="crimson" />
+			<enumeration value="cyan" />
+			<enumeration value="darkblue" />
+			<enumeration value="darkcyan" />
+			<enumeration value="darkgoldenrod" />
+			<enumeration value="darkgray" />
+			<enumeration value="darkgreen" />
+			<enumeration value="darkgrey" />
+			<enumeration value="darkkhaki" />
+			<enumeration value="darkmagenta" />
+			<enumeration value="darkolivegreen" />
+			<enumeration value="darkorange" />
+			<enumeration value="darkorchid" />
+			<enumeration value="darkred" />
+			<enumeration value="darksalmon" />
+			<enumeration value="darkseagreen" />
+			<enumeration value="darkslateblue" />
+			<enumeration value="darkslategray" />
+			<enumeration value="darkslategrey" />
+			<enumeration value="darkturquoise" />
+			<enumeration value="darkviolet" />
+			<enumeration value="deeppink" />
+			<enumeration value="deepskyblue" />
+			<enumeration value="dimgray" />
+			<enumeration value="dimgrey" />
+			<enumeration value="dodgerblue" />
+			<enumeration value="firebrick" />
+			<enumeration value="floralwhite" />
+			<enumeration value="forestgreen" />
+			<enumeration value="fuchsia" />
+			<enumeration value="gainsboro" />
+			<enumeration value="ghostwhite" />
+			<enumeration value="gold" />
+			<enumeration value="goldenrod" />
+			<enumeration value="gray" />
+			<enumeration value="green" />
+			<enumeration value="greenyellow" />
+			<enumeration value="grey" />
+			<enumeration value="honeydew" />
+			<enumeration value="hotpink" />
+			<enumeration value="indianred" />
+			<enumeration value="indigo" />
+			<enumeration value="ivory" />
+			<enumeration value="khaki" />
+			<enumeration value="lavender" />
+			<enumeration value="lavenderblush" />
+			<enumeration value="lawngreen" />
+			<enumeration value="lemonchiffon" />
+			<enumeration value="lightblue" />
+			<enumeration value="lightcoral" />
+			<enumeration value="lightcyan" />
+			<enumeration value="lightgoldenrodyellow" />
+			<enumeration value="lightgray" />
+			<enumeration value="lightgreen" />
+			<enumeration value="lightgrey" />
+			<enumeration value="lightpink" />
+			<enumeration value="lightsalmon" />
+			<enumeration value="lightseagreen" />
+			<enumeration value="lightskyblue" />
+			<enumeration value="lightslategray" />
+			<enumeration value="lightslategrey" />
+			<enumeration value="lightsteelblue" />
+			<enumeration value="lightyellow" />
+			<enumeration value="lime" />
+			<enumeration value="limegreen" />
+			<enumeration value="linen" />
+			<enumeration value="magenta" />
+			<enumeration value="maroon" />
+			<enumeration value="mediumaquamarine" />
+			<enumeration value="mediumblue" />
+			<enumeration value="mediumorchid" />
+			<enumeration value="mediumpurple" />
+			<enumeration value="mediumseagreen" />
+			<enumeration value="mediumslateblue" />
+			<enumeration value="mediumspringgreen" />
+			<enumeration value="mediumturquoise" />
+			<enumeration value="mediumvioletred" />
+			<enumeration value="midnightblue" />
+			<enumeration value="mintcream" />
+			<enumeration value="mistyrose" />
+			<enumeration value="moccasin" />
+			<enumeration value="navajowhite" />
+			<enumeration value="navy" />
+			<enumeration value="oldlace" />
+			<enumeration value="olive" />
+			<enumeration value="olivedrab" />
+			<enumeration value="orange" />
+			<enumeration value="orangered" />
+			<enumeration value="orchid" />
+			<enumeration value="palegoldenrod" />
+			<enumeration value="palegreen" />
+			<enumeration value="paleturquoise" />
+			<enumeration value="palevioletred" />
+			<enumeration value="papayawhip" />
+			<enumeration value="peachpuff" />
+			<enumeration value="peru" />
+			<enumeration value="pink" />
+			<enumeration value="plum" />
+			<enumeration value="powderblue" />
+			<enumeration value="purple" />
+			<enumeration value="red" />
+			<enumeration value="rosybrown" />
+			<enumeration value="royalblue" />
+			<enumeration value="saddlebrown" />
+			<enumeration value="salmon" />
+			<enumeration value="sandybrown" />
+			<enumeration value="seagreen" />
+			<enumeration value="seashell" />
+			<enumeration value="sienna" />
+			<enumeration value="silver" />
+			<enumeration value="skyblue" />
+			<enumeration value="slateblue" />
+			<enumeration value="slategray" />
+			<enumeration value="slategrey" />
+			<enumeration value="snow" />
+			<enumeration value="springgreen" />
+			<enumeration value="steelblue" />
+			<enumeration value="tan" />
+			<enumeration value="teal" />
+			<enumeration value="thistle" />
+			<enumeration value="tomato" />
+			<enumeration value="turquoise" />
+			<enumeration value="violet" />
+			<enumeration value="wheat" />
+			<enumeration value="white" />
+			<enumeration value="whitesmoke" />
+			<enumeration value="yellow" />
+			<enumeration value="yellowgreen" />
+			<enumeration value="none" />
+			<!-- **************** TO BE COMPLETED ******************** -->
+		</restriction>
+	</simpleType>
+
+	<simpleType name="ColorType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a color value. It uses the sRGB color space.
+				This type is equivalent to SVG 1.1 color property.
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:ColorRGBType tns:ColorReferenceType" />
+	</simpleType>
+
+</schema>

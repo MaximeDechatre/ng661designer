@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<!--
+ Copyright (c) 2015, 2018 Airbus and the NG661designer project contributors.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ Contributors:
+     Obeo - initial API and implementation
+-->
+<plugin>
+  <extension point="org.eclipse.sirius.componentization">
+    <component class="org.polarsys.ng661designer.design.Activator"
+               id="org.polarsys.ng661designer.design"
+	       name="ng661designer">
+    </component>
+  </extension>
+   <extension
+        point="org.eclipse.ui.navigator.viewer">
+     <viewerActionBinding
+           viewerId="org.eclipse.sirius.ui.tools.views.model.explorer">
+        <includes>
+           <actionExtension
+                 pattern="org.polarsys.ng661designer.design.navigator.*">
+           </actionExtension>
+        </includes>
+     </viewerActionBinding>
+     <viewerContentBinding
+           viewerId="org.eclipse.sirius.ui.tools.views.model.explorer">
+        <includes>
+           <contentExtension
+                 pattern="org.polarsys.ng661designer.design.navigator.*">
+           </contentExtension>
+        </includes>
+     </viewerContentBinding>
+     <dragAssistant
+            class="org.polarsys.ng661designer.design.navigator.NG661CommonDragAdapterAssistant"
+            viewerId="org.eclipse.sirius.ui.tools.views.model.explorer">
+      </dragAssistant>
+  </extension>
+  <extension
+         point="org.eclipse.ui.navigator.navigatorContent">
+      <navigatorContent
+            activeByDefault="true"
+            appearsBefore="org.eclipse.sirius.ui.resource.content.session"
+            contentProvider="org.polarsys.ng661designer.design.navigator.NG661ContentProvider"
+            id="org.polarsys.ng661designer.design.navigator.DndProvider"
+            labelProvider="org.polarsys.ng661designer.design.navigator.NG661LabelProvider"
+            name="Designer Drag n Drop Support"
+            priority="higher"
+            providesSaveables="false">
+             <enablement>
+                <instanceof
+                      value="org.eclipse.emf.ecore.EObject">
+                </instanceof>
+            </enablement>
+         <dropAssistant
+               class="org.polarsys.ng661designer.design.navigator.NG661CommonDropAdapterAssistant"
+               id="org.polarsys.ng661designer.design.navigator.DropAssistant">
+            <possibleDropTargets>
+               <instanceof
+                     value="org.eclipse.emf.ecore.EObject">
+               </instanceof>
+            </possibleDropTargets>
+         </dropAssistant>
+      </navigatorContent>
+   </extension>
+  <extension
+        point="org.eclipse.sirius.sessionManagerListener">
+     <listener
+           class="org.polarsys.ng661designer.design.listeners.NG661DesignerSessionListener">
+     </listener>
+  </extension>
+
+</plugin>

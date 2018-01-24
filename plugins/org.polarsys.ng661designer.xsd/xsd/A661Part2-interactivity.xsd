@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/A661Part2" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified">
+	
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-definitions.xsd" />
+	<include schemaLocation="A661Part2-structureTypes.xsd" />
+	<annotation>
+		<documentation xml:lang="en">This Schema defines Function, Operation, Clock, Param, Event and all the Event structure types that can be used by a component.</documentation>
+	</annotation>
+	
+	<complexType name="EventType">
+		<attribute name="name" type="tns:NameType" use="required" />
+	</complexType>
+
+	<attributeGroup name="EventAttributesGroup">
+		<attribute name="name" type="tns:NameType" use="required" />
+		<attribute name="type" type="tns:TypeType" use="required" />
+	</attributeGroup>
+
+	<complexType name="StructEventType">
+		<sequence maxOccurs="unbounded">
+			<group ref="tns:StructElementContent"/>
+		</sequence>
+		<attributeGroup ref="tns:EventAttributesGroup"/>
+	</complexType>
+	
+	
+	<complexType name="ArrayEventType">
+		<group ref="tns:ArrayElementContent"/>
+		<attributeGroup ref="tns:EventAttributesGroup"/>
+		<attributeGroup ref="tns:ArrayElementAttributesGroup"/>
+	</complexType>
+	
+	
+	<complexType name="UnionEventType">
+		<attributeGroup ref="tns:EventAttributesGroup"/>
+		<attributeGroup ref="tns:UnionElementAttributesGroup"/>
+	</complexType>
+	
+	<complexType name="OperationType">
+		<annotation>
+			<documentation>PlaceHolder</documentation>
+		</annotation>
+	</complexType>
+
+	<complexType name="FunctionType">
+		<sequence>
+			<element name="Param" type="tns:ParamType" maxOccurs="unbounded" minOccurs="0" />
+			<element name="Script" type="string" maxOccurs="1" minOccurs="1" />
+		</sequence>
+		<attribute name="name" type="string" use="required" />
+	</complexType>
+
+	<complexType name="ParamType">
+		<attribute name="name" type="string" use="required" />
+		<attribute name="type" type="string" use="required" />
+		<attribute name="modality" use="required">
+			<simpleType>
+				<restriction base="string">
+					<enumeration value="In" />
+					<enumeration value="Out" />
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+
+	<complexType name="ClockType">
+		<attribute name="id" type="tns:NameType" use="required" />
+	</complexType>
+</schema>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+	
+	<include schemaLocation="A661Part2-types.xsd"/>
+	<include schemaLocation="A661Part2-capacities.xsd"/>
+
+	<annotation>
+		<documentation xml:lang="en">This Schema defines the PathPrimitive available in ARINC 661 Part 2</documentation>
+	</annotation>
+
+	<complexType name="PathPrimitive">
+		<sequence>
+			<element name="d" type="tns:PathArray" />
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" 			/>
+		<attributeGroup ref="tns:PaintFillCapacities" 		/>
+		<attributeGroup ref="tns:PaintStrokeCapacities" 	/>
+		<attributeGroup ref="tns:PaintGradientCapacities"	/>
+		<attributeGroup ref="tns:GraphicsCapacities" 		/>
+		<attributeGroup ref="tns:FilterCapacities" 			/>
+	</complexType>
+	
+	<complexType name="PathArray">
+		<sequence>
+			<group ref="tns:PathSegmentGroup" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+	
+	<group name="PathSegmentGroup">
+		<choice>
+			<element name="MoveToCommand" 					type="tns:MoveToCommand"					/>
+			<element name="ClosePathCommand" 				type="tns:ClosePathCommand"					/>
+			<element name="LineToCommand" 					type="tns:LineToCommand"					/>
+			<element name="CubicBezierCurveCommand" 		type="tns:CubicBezierCurveCommand"			/>
+			<element name="EllipseArcCurveCommand" 			type="tns:EllipseArcCurveCommand"			/>
+			<element name="RelativeMoveToCommand" 			type="tns:RelativeMoveToCommand"			/>
+			<element name="RelativeLineToCommand" 			type="tns:RelativeLineToCommand"			/>
+			<element name="RelativeClosePathCommand" 		type="tns:RelativeClosePathCommand"			/>
+			<element name="RelativeCubicBezierCurveCommand" type="tns:RelativeCubicBezierCurveCommand"	/>
+			<element name="RelativeEllipseArcCurveCommand"	type="tns:RelativeEllipseArcCurveCommand"	/>
+		</choice>
+	</group>
+	
+	<complexType name="MoveToCommand">
+		<attributeGroup ref="tns:PointGroup"/>
+	</complexType>
+	
+	<complexType name="RelativeMoveToCommand">
+		<attributeGroup ref="tns:PointGroup"/>
+	</complexType>
+	
+	<complexType name="ClosePathCommand"/>
+	
+	<complexType name="RelativeClosePathCommand"/>
+	
+	<complexType name="LineToCommand">
+		<attributeGroup ref="tns:PointGroup"/>
+	</complexType>
+	
+	<complexType name="RelativeLineToCommand">
+		<attributeGroup ref="tns:PointGroup"/>
+	</complexType>
+	
+	<complexType name="CubicBezierCurveCommand">
+		<attributeGroup ref="tns:CubicBezierPointGroup"/>
+	</complexType>
+	
+	<complexType name="RelativeCubicBezierCurveCommand">
+		<attributeGroup ref="tns:CubicBezierPointGroup"/>
+	</complexType>
+	
+	<complexType name="EllipseArcCurveCommand">
+		<attributeGroup ref="tns:ArcPointGroup"/>
+	</complexType>
+	
+	<complexType name="RelativeEllipseArcCurveCommand">
+		<attributeGroup ref="tns:ArcPointGroup"/>
+	</complexType>
+	
+	<attributeGroup name="PointGroup">
+		<attribute name="x" type="tns:PositionType"/>
+		<attribute name="y" type="tns:PositionType"/>
+	</attributeGroup>
+	
+	<attributeGroup name="CubicBezierPointGroup">
+		<attribute name="x" 	type="tns:PositionType" />
+		<attribute name="y" 	type="tns:PositionType" />
+		<attribute name="x1" 	type="tns:PositionType" />
+		<attribute name="y1" 	type="tns:PositionType" />
+		<attribute name="x2" 	type="tns:PositionType" />
+		<attribute name="y2" 	type="tns:PositionType" />
+	</attributeGroup>
+	
+	<attributeGroup name="ArcPointGroup">
+		<attribute name="x" 			type="tns:PositionType"	/>
+		<attribute name="y" 			type="tns:PositionType"	/>
+		<attribute name="r1" 			type="tns:DistanceType"	/>
+		<attribute name="r2" 			type="tns:DistanceType"	/>
+		<attribute name="angle" 		type="tns:AngleType"	/>
+		<attribute name="largeArcFlag" 	type="tns:BooleanType"	/>
+		<attribute name="sweepFlag" 	type="tns:BooleanType"	/>
+	</attributeGroup>
+	
+</schema>

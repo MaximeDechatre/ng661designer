@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/A661Part2" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+
+	<import schemaLocation="scxml.xsd" namespace="http://www.w3.org/2005/07/scxml"/>
+
+	<include schemaLocation="A661Part2-types.xsd" />
+    <include schemaLocation="A661Part2-properties.xsd" />
+    <include schemaLocation="A661Part2-interactivity.xsd" />
+
+	<annotation>
+		<documentation>This schema defines the Behavior sub-section of A661 Part 2 language.</documentation>
+	</annotation>
+	
+	<complexType name="BehaviorType">
+        <annotation>
+        	<documentation>Allows to instantiate components that have no representation.</documentation>
+        </annotation>
+        <sequence>
+			<element name="scxml" type="scxml:scxml.scxml.type" maxOccurs="1" minOccurs="0"	/>
+			<group ref="tns:BehaviorGroup" maxOccurs="unbounded" minOccurs="0"/>
+		</sequence>
+	</complexType>
+
+	<group name="BehaviorGroup">
+		<choice>
+			<element name="Function" type="tns:FunctionType" />
+			<element name="Property" type="tns:PrivatePropertyType" />
+		</choice>
+	</group>
+</schema>
