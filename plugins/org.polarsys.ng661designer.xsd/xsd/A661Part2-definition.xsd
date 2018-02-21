@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/A661Part2" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+
+	<include schemaLocation="A661Part2-types.xsd" />
+    <include schemaLocation="A661Part2-definitions.xsd" />
+    <include schemaLocation="A661Part2-import.xsd" />
+
+	<annotation>
+		<documentation>This schema defines the definition sub-section of A661 Part 2 language.</documentation>
+	</annotation>
+    
+    <complexType name="DefinitionType">
+		<!-- PublicDefinitions and PrivateDefinitions are not in the actual specification. -->
+		<sequence>
+			<group ref="tns:DefinitionGroup"  minOccurs="0" maxOccurs="unbounded" />
+			<!-- <element name="PublicDefinitions" type="tns:DefinitionsType" minOccurs="0" maxOccurs="1" />
+			<element name="PrivateDefinitions" type="tns:DefinitionsType" minOccurs="0" maxOccurs="1" />  -->
+		</sequence>
+	</complexType>
+	
+	<group name="DefinitionGroup">
+		<choice>
+			<element name="Import"         			type="tns:ImportType" 		/>
+			<element name="TypeDefinition" 			type="tns:DefinitionsType" 	/> <!--  TODO : check type  -->
+			<element name="PropertyGroupDefinition" type="tns:DefinitionsType" 	/> <!--  TODO : check type  -->
+		</choice>
+	</group>
+    
+</schema>

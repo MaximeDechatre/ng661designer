@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+
+	<include schemaLocation="A661Part2-colorTypeDefinition.xsd" />
+	<include schemaLocation="A661Part2-timeTypeDefinition.xsd" />
+
+	<annotation>
+		<documentation xml:lang="en">
+			This Schema defines the build-in types for ARINC 661 Part 2
+		</documentation>
+	</annotation>
+
+	<simpleType name="Expression">
+		<restriction base="string">
+			<pattern value="\{.*\}"/>
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="CharacterType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a general purpose character.
+				This type is based on xs:string type but has a length of 1.
+			</documentation>
+		</annotation>
+		<restriction base="string">
+			<minLength value="1"/>
+			<maxLength value="1"/>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="StringType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a general purpose string.
+				This type is equivalent to xs:string type.
+			</documentation>
+		</annotation>
+		<restriction base="string" />
+	</simpleType>
+
+	<simpleType name="IntegerType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a general purpose signed integer.
+				This type is equivalent to xs:long type (64-bit signed integer).
+			</documentation>
+		</annotation>
+		<union memberTypes="long tns:Expression" />
+	</simpleType>
+
+	<simpleType name="RealType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a general purpose real.
+				This type is equivalent to xs:double type (64-bit IEEE floating point type).
+			</documentation>
+		</annotation>
+		<union memberTypes="double tns:Expression" />
+	</simpleType>
+
+	<simpleType name="NameType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify an identifier of a component or primitive.
+			</documentation>
+ 		</annotation>
+		<restriction base="string">
+			<maxLength value="128"/>
+			<minLength value="1"/>
+			<pattern value="[_a-zA-Z][_0-9a-zA-Z]*"/>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="ObjectType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify an identifier of a component or primitive.
+			</documentation>
+ 		</annotation>
+		<restriction base="string">
+			<maxLength value="128"/>
+			<minLength value="1"/>
+			<pattern value="[_a-zA-Z][_0-9a-zA-Z]*"/>
+		</restriction>
+	</simpleType>
+
+	<simpleType name="TypeType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify an identifier of a type.
+			</documentation>
+		</annotation>
+		<restriction base="string">
+			<maxLength value="128"/>
+			<minLength value="1"/>
+			<pattern value="[_a-zA-Z][_0-9a-zA-Z]*Type" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="PositionType">
+		<annotation>
+			<documentation xml:lang="en">
+				TBD
+			</documentation>
+		</annotation>
+		<union memberTypes="double tns:Expression" />
+	</simpleType>
+	
+	<complexType name="PointType">
+		<attribute name="x" type="tns:PositionType"/>
+		<attribute name="y" type="tns:PositionType"/>
+	</complexType>
+	
+	<!-- PointListType would be a better name than PositionListType -->
+	<complexType name="PositionListType">
+		<sequence>
+			<element name="Point" type="tns:PointType" minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</complexType>
+
+	<simpleType name="DistanceType">
+		<annotation>
+			<documentation xml:lang="en">
+				TBD
+			</documentation>
+		</annotation>
+		<union memberTypes="double tns:Expression" />
+	</simpleType>
+	
+	<simpleType name="StippleType">
+		<annotation>
+			<documentation xml:lang="en">
+				TBD SVG Stipple
+			</documentation>
+		</annotation>
+		<restriction base="string" />
+	</simpleType>
+
+	<simpleType name="AngleTypeVal">
+		<restriction base="double">
+			<minInclusive value="-360.0" />
+			<maxInclusive value="360.0" />
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="AngleType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify an orientated or non-orientated angular value.
+				The unit of angles is degrees. The positive direction of rotation is in the
+				counter-clockwise direction from the X-axis.
+
+				The operational range for angles is -360.0° to 360.0° inclusive.
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:AngleTypeVal tns:Expression"/>
+	</simpleType>	
+
+	<simpleType name="OpacityTypeVal">
+		<restriction base="double">
+			<minInclusive value="0.0" />
+			<maxInclusive value="1.0" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="OpacityType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify opacity as a real value within the range 0.0 to 1.0, where 0.0 is fully transparent and 1.0 is fully opaque.
+				This type is equivalent
+				to SVG 1.1 &lt;opacity-value&gt; </documentation>
+		</annotation>
+		<union memberTypes="tns:OpacityTypeVal tns:Expression"/>
+	</simpleType>
+	
+	<simpleType name="FillRuleTypeVal">
+		<!-- FillRuleType is not used in the actual specification. -->
+		<restriction base="string">
+			<enumeration value="nonzero" />
+			<enumeration value="evenodd" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="FillRuleType">
+		<!-- This type is not used in the actual specification. -->
+		<annotation>
+			<documentation xml:lang="en">
+				The rule to determine the interior of the shape. It can be one of the two following SVG rules : 
+				'nonzero' or 'evenodd'
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:FillRuleTypeVal tns:Expression"/>
+	</simpleType>	
+
+	<simpleType name="VisibilityTypeVal">
+		<restriction base="string">
+			<enumeration value="visible" />
+			<enumeration value="hidden" />
+			<enumeration value="collapse" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="VisibilityType">
+		<annotation>
+			<documentation xml:lang="en">
+				The visibility of the item It can be one of the following SVG values : visible, hidden or collapse
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:VisibilityTypeVal tns:Expression"/>
+	</simpleType>	
+
+	<simpleType name="ImageType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a Uniform Resource Identifier to an image resource.
+				For more information on supported file format see section §TBD
+			</documentation>
+		</annotation>
+		<union memberTypes="anyURI tns:Expression" />
+	</simpleType>
+
+	<simpleType name="DateType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a date in the form YYYY-MM-DD where YYYY indicates the year, MM the month and DD the day.
+				This type is equivalent to xs:date type.
+			</documentation>
+		</annotation>
+		<union memberTypes="date tns:Expression" />
+	</simpleType>
+
+	<simpleType name="DateTimeType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a date and a time in the form YYYY-MM-DDThh:mm:ss where YYYY indicates the year, MM the month and DD the day, T is a marker that
+				indicates the start of the time section, hh indicates the hour, mm the minute and ss the second.
+				This type is equivalent to xs:dateTime type.
+			</documentation>
+		</annotation>
+		<union memberTypes="dateTime tns:Expression" />
+	</simpleType>
+
+	<simpleType name="FrequencyTypeVal">
+		<restriction base="double">
+			<minInclusive value="0.0" />
+			<maxInclusive value="1000.0" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="FrequencyType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a frequency. The unit of frequencies is hertz.
+				The operational range for frequency is 0.0 to 1000.0 Hz inclusive.
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:FrequencyTypeVal tns:Expression"/>
+	</simpleType>
+
+	<simpleType name="VelocityType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a speed such as a finger speed. The unit for velocity is mm/s.
+				The operational range for velocity is 0.0 to 3E11
+			</documentation>
+		</annotation>
+		<restriction base="double">
+			<minInclusive value="0.0" />
+			<maxInclusive value="3E11" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="BooleanTypeVal">
+		<restriction base="string">
+			<enumeration value="true" />
+			<enumeration value="True" />
+			<enumeration value="TRUE" />
+			<enumeration value="false" />
+			<enumeration value="False" />
+			<enumeration value="FALSE" />
+			<enumeration value="yes" />
+			<enumeration value="Yes" />
+			<enumeration value="YES" />
+			<enumeration value="no" />
+			<enumeration value="No" />
+			<enumeration value="NO" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="BooleanType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify booleans. The allowed value are
+				true, false
+				TRUE, FALSE
+				True, False
+				yes, no
+				Yes, No
+				YES, NO
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:BooleanTypeVal tns:Expression"/>
+	</simpleType>
+
+	<simpleType name="AspectRatioTypeVal">
+		<restriction base="string">
+			<enumeration value="none" />
+			<enumeration value="meet" />
+			<enumeration value="slice" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="AspectRatioType">
+		<annotation>
+			<documentation xml:lang="en">
+				Aspect ratio for image, can be one of the following 'none', 'meet', 'slice'
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:AspectRatioTypeVal tns:Expression"/>
+	</simpleType>
+
+	<simpleType name="AlignementTypeVal">
+		<restriction base="string">
+			<enumeration value="topLeft" />
+			<enumeration value="topCenter" />
+			<enumeration value="topRight" />
+			<enumeration value="centerLeft" />
+			<enumeration value="center" />
+			<enumeration value="centerRight" />
+			<enumeration value="bottomLeft" />
+			<enumeration value="bottomRight" />
+			<enumeration value="bottomCenter" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="AlignementType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify alignments. The allowed values are :
+				Top Left
+				Top Center
+				Top Right
+				Left
+				Center
+				Right
+				Bottom Left
+				Bottom Right
+				Bottom Center
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:AlignementTypeVal tns:Expression"/>
+	</simpleType>
+
+	<simpleType name="ZIndexTypeVal">
+		<restriction base="integer">
+			<minInclusive value="-32768" />
+			<maxInclusive value="32767" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="ZIndexType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify the drawing priority, in sense which component should be drawn on top of another.
+				The priority is an integer in the operational
+				range -32768 to 32767 inclusive, where higher priority components are drawn on top of lower priority component.
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:ZIndexTypeVal tns:Expression"/>
+	</simpleType>
+
+	<simpleType name="FormatStringTypeVal">
+		<restriction base="string">
+			<pattern value="[^_\.\+#&#x23E8;]*\+?[^\.\+#&#x23E8;]*[^_\.\+&#x23E8;]*\.?[^_\.\+&#x23E8;]*[^\.\+#&#x23E8;]*(&#x23E8;\+?[_]*[#]+)?[^_\.\+#&#x23E8;]*" />
+		</restriction>
+	</simpleType>
+
+	<simpleType name="FormatStringType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a format string used to convert numeric values into strings.
+				The formatstring is the based on the FormatString defined ARINC-661
+				Part1 section §3.3.10.1.
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:FormatStringTypeVal tns:Expression"/>
+	</simpleType>
+
+	<simpleType name="FontType">
+		<annotation>
+			<documentation xml:lang="en">
+				The type is used to specify a Uniform Resource Identifier to a font resource.
+				For more information on supported file format see section §TBD
+			</documentation>
+		</annotation>
+		<union memberTypes="anyURI tns:Expression" />
+	</simpleType>
+	
+	<simpleType name="PressureTypeVal">
+		<restriction base="double">
+			<minInclusive value="0.0" />
+			<maxInclusive value="1.0" />
+		</restriction>
+	</simpleType>
+	
+	<simpleType name="PressureType">
+		<annotation>
+			<documentation xml:lang="en">
+				This type is used to specify the pressure level on the touch screen.
+				It has a value from 0.0 to 1.0
+			</documentation>
+		</annotation>
+		<union memberTypes="tns:PressureTypeVal tns:Expression"/>
+	</simpleType>
+
+	<complexType name="CustomStringType_ElementType">
+		<sequence>
+			<any namespace="##other" minOccurs="0" processContents="lax"></any>
+		</sequence>
+			
+		<attribute name="name" type="tns:NameType" use="required" />
+		<attribute name="minLength"	type="tns:IntegerType" use="optional" default="0" />
+		<attribute name="maxLength"	type="tns:IntegerType" use="optional" default="256" />
+		<attribute name="regex" type="tns:StringType" use="optional" default=".*" />
+		<anyAttribute namespace="##other" processContents="lax" />
+	</complexType>
+	
+	<complexType name="CustomIntegerType_ElementType">
+		<sequence>
+			<any namespace="##other" minOccurs="0" processContents="lax"></any>
+		</sequence>
+			
+		<attribute name="name" type="tns:NameType" use="required" />
+		<attribute name="min"	type="tns:IntegerType" use="optional" default="-9223372036854775808" />
+		<attribute name="max"	type="tns:IntegerType" use="optional" default="9223372036854775807" />
+		<attribute name="unit" type="tns:StringType" use="optional" default="" />
+		<attribute name="resolution" type="tns:IntegerType" use="optional" default="1" />
+		<anyAttribute namespace="##other" processContents="lax" />
+	</complexType>
+
+	<complexType name="CustomRealType_ElementType">
+		<sequence>
+			<any namespace="##other" minOccurs="0" processContents="lax"></any>
+		</sequence>
+			
+		<attribute name="name" type="tns:NameType" use="required" />
+		<attribute name="min"	type="tns:RealType" use="optional" default="0.0" />
+		<attribute name="max"	type="tns:RealType" use="optional" default="1.0" />
+		<attribute name="unit" type="tns:StringType" use="optional" default="" />
+		<attribute name="resolution" type="tns:RealType" use="optional" default="0.001" />
+		<anyAttribute namespace="##other" processContents="lax" />
+	</complexType>
+		
+</schema>	

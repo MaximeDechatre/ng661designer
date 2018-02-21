@@ -1,0 +1,1915 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2015, 2018 Airbus and the NG661designer project contributors.&#xA;All rights reserved. This program and the accompanying materials&#xA;are made available under the terms of the Eclipse Public License v1.0&#xA;which accompanies this distribution, and is available at&#xA;http://www.eclipse.org/legal/epl-v10.html&#xA;Contributors:&#xA;    Obeo - initial API and implementation"
+    modelDirectory="/org.polarsys.ng661designer.dsl.part2/src-gen" creationIcons="false"
+    editDirectory="/org.polarsys.ng661designer.dsl.part2.edit/src-gen" editorDirectory="/org.polarsys.ng661designer.dsl.part2.editor/src-gen"
+    modelPluginID="org.polarsys.ng661designer.dsl.part2" modelName="NG661Part2" editPluginClass="org.polarsys.ng661designer.part2.provider.NG661Part2EditPlugin"
+    editorPluginClass="org.polarsys.ng661designer.part2.presentation.NG661Part2EditorPlugin"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" testsDirectory="/org.polarsys.ng661designer.dsl.part2.tests/src-gen"
+    testSuiteClass="org.polarsys.ng661designer.part2.tests.NG661Part2AllTests" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" operationReflection="true" importOrganizing="true">
+  <foreignModel>part2.ecore</foreignModel>
+  <genPackages prefix="Part2" basePackage="org.polarsys.ng661designer" resource="XML"
+      disposableProviderFactory="true" loadInitialization="true" literalsInterface="false"
+      ecorePackage="part2.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//AlignementTypeVal">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignementTypeVal/topLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignementTypeVal/topCenter"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignementTypeVal/topRight"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignementTypeVal/centerLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignementTypeVal/center"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignementTypeVal/centerRight"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignementTypeVal/bottomLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignementTypeVal/bottomRight"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignementTypeVal/bottomCenter"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//AlignmentType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType/topLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType/topCenter"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType/topRight"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType/centerLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType/center"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType/centerRight"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType/bottomLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType/bottomCenter"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType/bottomRight"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//AlignmentType1">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/topLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/centerLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/bottomLeft"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/topCenter"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/center"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/bottomCenter"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/topRight"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/centerRight"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/bottomRight"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/leftOnly"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/rightOnly"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AlignmentType1/centerOnly"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//AspectRatioType1">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AspectRatioType1/none"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AspectRatioType1/meet"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AspectRatioType1/slice"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//AspectRatioTypeVal">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AspectRatioTypeVal/none"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AspectRatioTypeVal/meet"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//AspectRatioTypeVal/slice"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//BooleanTypeVal">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/true"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/True1"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/TRUE2"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/false"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/False1"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/FALSE2"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/yes"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/Yes1"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/YES2"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/no"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/No1"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//BooleanTypeVal/NO2"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//ClipRuleType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ClipRuleType/nonzero"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ClipRuleType/evenodd"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//ColorReferenceType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/aliceblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/antiquewhite"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/aqua"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/aquamarine"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/azure"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/beige"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/bisque"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/black"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/blanchedalmond"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/blue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/blueviolet"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/brown"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/burlywood"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/cadetblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/chartreuse"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/chocolate"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/coral"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/cornflowerblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/cornsilk"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/crimson"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/cyan"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkcyan"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkgoldenrod"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkgray"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkgreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkgrey"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkkhaki"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkmagenta"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkolivegreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkorange"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkorchid"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkred"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darksalmon"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkseagreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkslateblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkslategray"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkslategrey"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkturquoise"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/darkviolet"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/deeppink"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/deepskyblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/dimgray"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/dimgrey"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/dodgerblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/firebrick"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/floralwhite"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/forestgreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/fuchsia"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/gainsboro"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/ghostwhite"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/gold"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/goldenrod"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/gray"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/green"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/greenyellow"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/grey"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/honeydew"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/hotpink"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/indianred"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/indigo"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/ivory"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/khaki"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lavender"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lavenderblush"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lawngreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lemonchiffon"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightcoral"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightcyan"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightgoldenrodyellow"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightgray"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightgreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightgrey"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightpink"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightsalmon"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightseagreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightskyblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightslategray"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightslategrey"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightsteelblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lightyellow"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/lime"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/limegreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/linen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/magenta"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/maroon"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mediumaquamarine"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mediumblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mediumorchid"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mediumpurple"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mediumseagreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mediumslateblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mediumspringgreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mediumturquoise"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mediumvioletred"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/midnightblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mintcream"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/mistyrose"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/moccasin"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/navajowhite"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/navy"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/oldlace"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/olive"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/olivedrab"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/orange"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/orangered"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/orchid"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/palegoldenrod"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/palegreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/paleturquoise"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/palevioletred"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/papayawhip"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/peachpuff"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/peru"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/pink"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/plum"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/powderblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/purple"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/red"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/rosybrown"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/royalblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/saddlebrown"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/salmon"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/sandybrown"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/seagreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/seashell"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/sienna"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/silver"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/skyblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/slateblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/slategray"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/slategrey"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/snow"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/springgreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/steelblue"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/tan"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/teal"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/thistle"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/tomato"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/turquoise"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/violet"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/wheat"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/white"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/whitesmoke"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/yellow"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/yellowgreen"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ColorReferenceType/none"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//FillRuleType1">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//FillRuleType1/nonzero"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//FillRuleType1/evenodd"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//FillRuleTypeVal">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//FillRuleTypeVal/nonzero"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//FillRuleTypeVal/evenodd"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//FlowDirectionType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//FlowDirectionType/right"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//FlowDirectionType/left"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//InstantiationModeType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//InstantiationModeType/Anonymous"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//InstantiationModeType/Grouped"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//InstantiationModeType/InsertChildrenNode"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//ModalityType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ModalityType/Local"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ModalityType/LocalConst"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//ModalityType1">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ModalityType1/In"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ModalityType1/Out"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//ModalityType2">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ModalityType2/InOut"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ModalityType2/Out"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ModalityType2/In"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ModalityType2/ConstOut"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//ModalityType2/ConstIn"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//MultilineModeType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//MultilineModeType/preserveCharacter"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//MultilineModeType/preserveCharacterAndAdvance"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//MultilineModeType/preserveWord"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//MultilineModeType/preserveWordAndAdvance"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//StrokeLinecapType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//StrokeLinecapType/butt"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//StrokeLinecapType/round"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//StrokeLinecapType/square"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//StrokeLinejoinType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//StrokeLinejoinType/miter"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//StrokeLinejoinType/round"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//StrokeLinejoinType/bevel"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//TextFlowType">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//TextFlowType/none"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//TextFlowType/clip"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//TextFlowType/multiline"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="part2.ecore#//VisibilityTypeVal">
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//VisibilityTypeVal/visible"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//VisibilityTypeVal/hidden"/>
+      <genEnumLiterals ecoreEnumLiteral="part2.ecore#//VisibilityTypeVal/collapse"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="part2.ecore#//AlignementType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//AlignementTypeValObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//AlignmentTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//AlignmentTypeObject1"/>
+    <genDataTypes ecoreDataType="part2.ecore#//AngleType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//AngleTypeVal"/>
+    <genDataTypes ecoreDataType="part2.ecore#//AngleTypeValObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//AspectRatioType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//AspectRatioTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//AspectRatioTypeValObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//BooleanType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//BooleanTypeValObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//CharacterType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ClipRuleTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ColorReferenceTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ColorRGBHEXType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ColorRGBRgb255Type"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ColorRGBRgbPercentType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ColorRGBType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ColorType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//DateTimeType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//DateType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//DistanceType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//Expression"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FillRuleType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FillRuleTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FillRuleTypeValObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FlowDirectionTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FontType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FormatStringType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FormatStringTypeVal"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FrequencyType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FrequencyTypeVal"/>
+    <genDataTypes ecoreDataType="part2.ecore#//FrequencyTypeValObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ImageType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//InstantiationModeTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//IntegerType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ModalityTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ModalityTypeObject1"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ModalityTypeObject2"/>
+    <genDataTypes ecoreDataType="part2.ecore#//MultilineModeTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//NameType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ObjectType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//OpacityType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//OpacityTypeVal"/>
+    <genDataTypes ecoreDataType="part2.ecore#//OpacityTypeValObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//PositionType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//PressureType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//PressureTypeVal"/>
+    <genDataTypes ecoreDataType="part2.ecore#//PressureTypeValObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//RealType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//StippleType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//StringType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//StrokeLinecapTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//StrokeLinejoinTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//TextFlowTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//TimeDefaultmillisecondsType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//TimeHoursType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//TimeMinutesType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//TimeSecondsOrSubsecondsType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//TimeType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//TypeType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//VelocityType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//VelocityTypeObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//VisibilityType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//VisibilityTypeValObject"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ZIndexType"/>
+    <genDataTypes ecoreDataType="part2.ecore#//ZIndexTypeVal"/>
+    <genClasses ecoreClass="part2.ecore#//ArcComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/fillOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/fillRule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/inboundAngle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/radius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArcComponent/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ArrayDefinitionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayDefinitionType/entryType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayDefinitionType/maxStringLength"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ArrayEntryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEntryType/entry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEntryType/otherEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEntryType/arrayEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEntryType/otherArrayEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEntryType/structEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEntryType/otherStructEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEntryType/unionEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEntryType/otherUnionEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayEntryType/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayEntryType/maxNumberOfEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayEntryType/numberOfEntries"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ArrayEventType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEventType/entry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEventType/otherEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEventType/arrayEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEventType/otherArrayEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEventType/structEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEventType/otherStructEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEventType/unionEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayEventType/otherUnionEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayEventType/maxNumberOfEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayEventType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayEventType/numberOfEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayEventType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ArrayFieldDefinitionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayFieldDefinitionType/entriesType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayFieldDefinitionType/maxStringLength"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ArrayFieldType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayFieldType/entry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayFieldType/otherEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayFieldType/arrayEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayFieldType/otherArrayEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayFieldType/structEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayFieldType/otherStructEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayFieldType/unionEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayFieldType/otherUnionEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayFieldType/maxNumberOfEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayFieldType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayFieldType/numberOfEntries"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ArrayPropertyType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayPropertyType/entry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayPropertyType/otherEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayPropertyType/arrayEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayPropertyType/otherArrayEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayPropertyType/structEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayPropertyType/otherStructEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayPropertyType/unionEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ArrayPropertyType/otherUnionEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayPropertyType/maxNumberOfEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayPropertyType/modality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayPropertyType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayPropertyType/numberOfEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ArrayPropertyType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//BehaviorType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//BehaviorType/scxml"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//BehaviorType/function"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//BehaviorType/property"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ChildPrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/childElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/transform"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ChildPrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ChildPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ChildPrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ChildPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ChildPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ChildPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ChildPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ChildPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ChildPrimitive/instantiationMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ChildPrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//CirclePrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/childElements"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//CirclePrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/cx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/cy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/fillOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/fillRule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/r"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CirclePrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ClipPathPrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ClipPathPrimitive/rectangle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ClipPathPrimitive/circle"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ClipPathPrimitive/ellipse"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ClipPathPrimitive/line"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ClipPathPrimitive/closedPath"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClipPathPrimitive/clipRule"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ClippingContainerPrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/childElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/clipPath"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ClippingContainerPrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClippingContainerPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClippingContainerPrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClippingContainerPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClippingContainerPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClippingContainerPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClippingContainerPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClippingContainerPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClippingContainerPrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ClockType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ClockType/id"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ClosePathCommand"/>
+    <genClasses ecoreClass="part2.ecore#//ComponentDefinitionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ComponentDefinitionType/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ComponentDefinitionType/interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ComponentDefinitionType/tree"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ComponentDefinitionType/behavior"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ComponentDefinitionType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//CrownComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/fillOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/fillRule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/innerRadius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/outerRadius"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CrownComponent/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//CubicBezierCurveCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CubicBezierCurveCommand/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CubicBezierCurveCommand/x1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CubicBezierCurveCommand/x2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CubicBezierCurveCommand/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CubicBezierCurveCommand/y1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CubicBezierCurveCommand/y2"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//CustomIntegerTypeElementType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute part2.ecore#//CustomIntegerTypeElementType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomIntegerTypeElementType/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomIntegerTypeElementType/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomIntegerTypeElementType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomIntegerTypeElementType/resolution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomIntegerTypeElementType/unit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute part2.ecore#//CustomIntegerTypeElementType/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//CustomRealTypeElementType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute part2.ecore#//CustomRealTypeElementType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomRealTypeElementType/max"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomRealTypeElementType/min"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomRealTypeElementType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomRealTypeElementType/resolution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomRealTypeElementType/unit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute part2.ecore#//CustomRealTypeElementType/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//CustomStringTypeElementType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute part2.ecore#//CustomStringTypeElementType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomStringTypeElementType/maxLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomStringTypeElementType/minLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomStringTypeElementType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//CustomStringTypeElementType/regex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute part2.ecore#//CustomStringTypeElementType/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//DefinitionsType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//DefinitionsType/structDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//DefinitionsType/enumDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//DefinitionsType/arrayDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//DefinitionsType/unionDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//DefinitionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//DefinitionType/import"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//DefinitionType/typeDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//DefinitionType/propertyGroupDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference part2.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference part2.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//DocumentRoot/componentDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//EllipseArcCurveCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipseArcCurveCommand/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipseArcCurveCommand/largeArcFlag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipseArcCurveCommand/r1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipseArcCurveCommand/r2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipseArcCurveCommand/sweepFlag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipseArcCurveCommand/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipseArcCurveCommand/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//EllipsePrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/childElements"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//EllipsePrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/cx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/cy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/fillOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/fillRule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/rx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/ry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EllipsePrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//EntryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EntryType/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EntryType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//EnumDefinitionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//EnumDefinitionType/enumeration"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//EnumerationType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EnumerationType/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EnumerationType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//EventType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//EventType/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="part2.ecore#//FieldDefinitionAbstractType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FieldDefinitionAbstractType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//FieldDefinitionType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FieldDefinitionType/maxStringLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FieldDefinitionType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//FieldType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FieldType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FieldType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//FrameProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FrameProperties/active"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FrameProperties/ascenderMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FrameProperties/descenderMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FrameProperties/endMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FrameProperties/startMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FrameProperties/strokeWidth"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//FunctionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//FunctionType/param"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FunctionType/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//FunctionType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//GestureAreaPrimitive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/acceptedGesture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/preventStealing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/trackOutside"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GestureAreaPrimitive/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//GroupPrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/childElements"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//GroupPrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/tx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/ty"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//GroupPrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ImagePrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/childElements"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ImagePrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/alignment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/aspectRatio"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/source"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImagePrimitive/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ImportType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ImportType/file"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//InterfaceType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/import"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/property"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/arrayProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/structProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/enumProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/unionProperty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/arrayEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/structEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/enumEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/unionEvent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/operation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//InterfaceType/publicFunction"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//KeyboardInputPrimitive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/focus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/needFocus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/passThrough"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//KeyboardInputPrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//LinePrimitive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/x1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/x2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/y1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LinePrimitive/y2"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//LineToCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LineToCommand/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//LineToCommand/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//MoveToCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//MoveToCommand/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//MoveToCommand/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//OperationType"/>
+    <genClasses ecoreClass="part2.ecore#//OtherArrayEntriesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherArrayEntriesType/entry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherArrayEntriesType/otherEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherArrayEntriesType/arrayEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherArrayEntriesType/otherArrayEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherArrayEntriesType/structEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherArrayEntriesType/otherStructEntries"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherArrayEntriesType/unionEntry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherArrayEntriesType/otherUnionEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//OtherArrayEntriesType/maxNumberOfEntries"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//OtherArrayEntriesType/numberOfEntries"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//OtherEntriesType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//OtherEntriesType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//OtherStructEntriesType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherStructEntriesType/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherStructEntriesType/arrayField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherStructEntriesType/structField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherStructEntriesType/enumField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//OtherStructEntriesType/unionField"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//OtherUnionEntriesType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//OtherUnionEntriesType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//OtherUnionEntriesType/valueType"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ParamType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ParamType/modality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ParamType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ParamType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PathArray">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/moveToCommand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/closePathCommand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/lineToCommand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/cubicBezierCurveCommand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/ellipseArcCurveCommand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/relativeMoveToCommand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/relativeLineToCommand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/relativeClosePathCommand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/relativeCubicBezierCurveCommand"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathArray/relativeEllipseArcCurveCommand"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PathPrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PathPrimitive/d"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/fillOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/fillRule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PathPrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PointerAreaPrimitive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/acceptedButtons"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/cursor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/passThrough"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/preventStealing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/trackOutside"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerAreaPrimitive/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PointerGestureAreaPrimitive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/acceptedButtons"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/acceptedGesture"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/cursor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/trackOutside"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointerGestureAreaPrimitive/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PointType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointType/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PointType/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PolarLineComponent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/r"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/x1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolarLineComponent/y1"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PolygonPrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PolygonPrimitive/points"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/fillOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/fillRule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolygonPrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PolylinePrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PolylinePrimitive/points"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PolylinePrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PositionListType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//PositionListType/point"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PrivatePropertyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PrivatePropertyType/maxStringLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PrivatePropertyType/modality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PrivatePropertyType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PrivatePropertyType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PrivatePropertyType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//PropertyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PropertyType/maxStringLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PropertyType/modality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PropertyType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PropertyType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PropertyType/value"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//RectPrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/childElements"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//RectPrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/fillOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/fillRule"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/rx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/ry"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/stroke"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/strokeDasharray"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/strokeDashoffset"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/strokeLinecap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/strokeLinejoin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/strokeMiterlimit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/strokeOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/strokewidth"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RectPrimitive/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//RelativeClosePathCommand"/>
+    <genClasses ecoreClass="part2.ecore#//RelativeCubicBezierCurveCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeCubicBezierCurveCommand/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeCubicBezierCurveCommand/x1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeCubicBezierCurveCommand/x2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeCubicBezierCurveCommand/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeCubicBezierCurveCommand/y1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeCubicBezierCurveCommand/y2"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//RelativeEllipseArcCurveCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeEllipseArcCurveCommand/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeEllipseArcCurveCommand/largeArcFlag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeEllipseArcCurveCommand/r1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeEllipseArcCurveCommand/r2"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeEllipseArcCurveCommand/sweepFlag"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeEllipseArcCurveCommand/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeEllipseArcCurveCommand/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//RelativeLineToCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeLineToCommand/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeLineToCommand/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//RelativeMoveToCommand">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeMoveToCommand/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//RelativeMoveToCommand/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ReplicatePrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/childElements"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//ReplicatePrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/datamodel"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/firstIndex"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/indexAlias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/instanceAlias"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/maxNumberOfInstance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/numberOfInstance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReplicatePrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ReverseVideoProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReverseVideoProperties/active"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReverseVideoProperties/ascenderMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReverseVideoProperties/descenderMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReverseVideoProperties/endMargin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ReverseVideoProperties/startMargin"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//ScrollWheelInputPrimitive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/focus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/needFocus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/passThrough"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//ScrollWheelInputPrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//SimpleTextPrimitive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/wordSeparator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//SimpleTextPrimitive/reverseVideo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//SimpleTextPrimitive/frame"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//SimpleTextPrimitive/underline"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//SimpleTextPrimitive/strikeThrough"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/alignment"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/backgroundColor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/backgroundOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/fill"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/fillOpacity"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/flowDirection"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/fontName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/fontSize"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/lineGap"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/multilineMode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/textFlow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SimpleTextPrimitive/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//StrikeThroughProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StrikeThroughProperties/active"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StrikeThroughProperties/distance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StrikeThroughProperties/strokeWidth"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//StructDefinitionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructDefinitionType/fieldDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructDefinitionType/structFieldDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructDefinitionType/arrayFieldDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructDefinitionType/enumFieldDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructDefinitionType/unionFieldDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//StructEntryType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEntryType/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEntryType/arrayField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEntryType/structField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEntryType/enumField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEntryType/unionField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StructEntryType/index"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//StructEventType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEventType/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEventType/arrayField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEventType/structField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEventType/enumField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructEventType/unionField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StructEventType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StructEventType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//StructFieldType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructFieldType/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructFieldType/arrayField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructFieldType/structField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructFieldType/enumField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructFieldType/unionField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StructFieldType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//StructPropertyType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructPropertyType/field"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructPropertyType/arrayField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructPropertyType/structField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructPropertyType/enumField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//StructPropertyType/unionField"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StructPropertyType/modality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StructPropertyType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//StructPropertyType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//SwitchNodePrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/childElements"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//SwitchNodePrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SwitchNodePrimitive/activeChild"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SwitchNodePrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SwitchNodePrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SwitchNodePrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SwitchNodePrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SwitchNodePrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SwitchNodePrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//SwitchNodePrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TouchAreaPrimitive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/height"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/maximumTouchPoints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/minimumTouchPoints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/passThrough"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/preventStealing"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/visible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TouchAreaPrimitive/y"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TransformGroupPrimitive">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/childElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/transform"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TransformGroupPrimitive/compositions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformGroupPrimitive/blocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformGroupPrimitive/drawingPriority"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformGroupPrimitive/enable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformGroupPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformGroupPrimitive/inheritedBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformGroupPrimitive/inheritedEnable"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformGroupPrimitive/inheritedVisible"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformGroupPrimitive/visible"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TransformMatrixType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformMatrixType/a"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformMatrixType/b"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformMatrixType/c"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformMatrixType/d"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformMatrixType/e"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformMatrixType/f"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TransformRotateType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformRotateType/angle"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformRotateType/cx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformRotateType/cy"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TransformScaleType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformScaleType/sx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformScaleType/sy"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TransformSkewXType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformSkewXType/angle"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TransformSkewYType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformSkewYType/angle"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TransformTranslateType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformTranslateType/tx"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TransformTranslateType/ty"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TransformType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//TransformType/transformMatrix"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//TransformType/transformTranslate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//TransformType/transformScale"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//TransformType/transformRotate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//TransformType/transformSkewX"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//TransformType/transformSkewY"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TreeType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//TreeType/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/import"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/group1"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/clock"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//TreeType/compositions"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//TypeAlternativeType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TypeAlternativeType/maxStringLength"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TypeAlternativeType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TypeAlternativeType/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="part2.ecore#//TypeDefinitionAbstractType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//TypeDefinitionAbstractType/name"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//UnderlineProperties">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnderlineProperties/active"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnderlineProperties/distance"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnderlineProperties/strokeWidth"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//UnionDefinitionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//UnionDefinitionType/typeAlternative"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//UnionEntryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionEntryType/index"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionEntryType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionEntryType/valueType"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//UnionEventType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionEventType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionEventType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionEventType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionEventType/valueType"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//UnionFieldType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionFieldType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionFieldType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionFieldType/valueType"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//UnionPropertyType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionPropertyType/modality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionPropertyType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionPropertyType/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionPropertyType/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//UnionPropertyType/valueType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="part2.ecore#//TreeTypes"/>
+    <genClasses image="false" ecoreClass="part2.ecore#//ClipPathTypes"/>
+    <genClasses ecoreClass="part2.ecore#//PropertyValue">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute part2.ecore#//PropertyValue/value"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference part2.ecore#//PropertyValue/property"/>
+    </genClasses>
+    <genClasses ecoreClass="part2.ecore#//WidgetComposition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/representation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/values"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/childElements"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/group"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/transformGroup"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/replicate"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/children"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/switchNode"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/clippingContainer"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/rectangle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/circle"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/ellipse"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/line"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/polyline"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/polygon"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/path"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/image"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/simpleText"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/arc"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/crown"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/polarLine"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/pointerArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/pointerGestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/touchArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/gestureArea"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/scrollWheelInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/keyboardInput"/>
+      <genFeatures property="None" notify="false" createChild="false" propertySortChoices="true"
+          ecoreFeature="ecore:EReference part2.ecore#//WidgetComposition/clock"/>
+    </genClasses>
+  </genPackages>
+  <genPackages prefix="Scxml" basePackage="org.w3._2005._07" resource="XML" disposableProviderFactory="true"
+      generateModelWizard="false" ecorePackage="scxml.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="scxml.ecore#//ScxmlTransitionTypeType">
+      <genEnumLiterals ecoreEnumLiteral="scxml.ecore#//ScxmlTransitionTypeType/internal"/>
+      <genEnumLiterals ecoreEnumLiteral="scxml.ecore#//ScxmlTransitionTypeType/external"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="scxml.ecore#//ScxmlIdType"/>
+    <genDataTypes ecoreDataType="scxml.ecore#//ScxmlScriptSourceType"/>
+    <genDataTypes ecoreDataType="scxml.ecore#//ScxmlTransitionCondType"/>
+    <genDataTypes ecoreDataType="scxml.ecore#//ScxmlTransitionEventType"/>
+    <genDataTypes ecoreDataType="scxml.ecore#//ScxmlTransitionTypeTypeObject"/>
+    <genClasses ecoreClass="scxml.ecore#//ScxmlOnexecuteType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlOnexecuteType/scxmlExecutablecontent"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlOnexecuteType/any"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxml.ecore#//ScxmlOnexecuteType/script"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlOnexecuteType/anyAttribute"/>
+    </genClasses>
+    <genClasses ecoreClass="scxml.ecore#//ScxmlScriptType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlScriptType/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlScriptType/scxmlExtraContent"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlScriptType/any"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlScriptType/src"/>
+      <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlScriptType/content"/>
+    </genClasses>
+    <genClasses ecoreClass="scxml.ecore#//ScxmlScxmlType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxml.ecore#//ScxmlScxmlType/state"/>
+      <genFeatures property="Readonly" children="true" createChild="true" ecoreFeature="ecore:EReference scxml.ecore#//ScxmlScxmlType/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlScxmlType/initial"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlScxmlType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlScxmlType/version"/>
+    </genClasses>
+    <genClasses ecoreClass="scxml.ecore#//ScxmlStateType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxml.ecore#//ScxmlStateType/onentry"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxml.ecore#//ScxmlStateType/onexit"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxml.ecore#//ScxmlStateType/transition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxml.ecore#//ScxmlStateType/state"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlStateType/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlStateType/initial"/>
+    </genClasses>
+    <genClasses ecoreClass="scxml.ecore#//ScxmlTransitionType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlTransitionType/scxmlExecutablecontent"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlTransitionType/any"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxml.ecore#//ScxmlTransitionType/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlTransitionType/cond"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlTransitionType/event"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlTransitionType/target"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//ScxmlTransitionType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="scxml.ecore#//DocumentRoot">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EAttribute scxml.ecore#//DocumentRoot/mixed"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scxml.ecore#//DocumentRoot/xMLNSPrefixMap"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference scxml.ecore#//DocumentRoot/xSISchemaLocation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference scxml.ecore#//DocumentRoot/scxml"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

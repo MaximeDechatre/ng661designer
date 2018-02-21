@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/A661Part2" xmlns:tns="http://www.example.org/A661Part2"  elementFormDefault="qualified" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+	
+	<include schemaLocation="A661Part2-types.xsd" />
+
+	<annotation>
+		<documentation xml:lang="en">This Schema defines types and attributes used in the interactivity schema and the properties schema. They are element</documentation>
+	</annotation>
+	
+	<attributeGroup name="SimpleElementAttributesGroup">
+		<attribute name="value" type="string" use="required"/>
+	</attributeGroup>
+	
+	<attributeGroup name="ArrayElementAttributesGroup">
+		<attribute name="numberOfEntries" 		type="integer" use="required"/>
+		<attribute name="maxNumberOfEntries" 	type="integer" use="required"/>
+	</attributeGroup>
+	
+	<attributeGroup name="UnionElementAttributesGroup">
+		<attribute name="valueType" type="string" use="required"/>
+		<attribute name="value" 	type="string" use="required"/>
+	</attributeGroup>
+	
+	<group name="StructElementContent">
+		<sequence>
+			<element name="Field" 		type="tns:FieldType"		minOccurs="0" maxOccurs="unbounded"/>
+			<element name="ArrayField" 	type="tns:ArrayFieldType"	minOccurs="0" maxOccurs="unbounded"/>
+			<element name="StructField"	type="tns:StructFieldType"	minOccurs="0" maxOccurs="unbounded"/>
+			<element name="EnumField" 	type="tns:FieldType" 		minOccurs="0" maxOccurs="unbounded"/>
+			<element name="UnionField" 	type="tns:UnionFieldType"	minOccurs="0" maxOccurs="unbounded"/>
+		</sequence>
+	</group>
+	
+	<group name="ArrayElementContent">
+		<choice>
+			<sequence minOccurs="1" maxOccurs="1">
+				<element name="Entry" 			type="tns:EntryType" 		minOccurs="0" maxOccurs="unbounded"/>
+				<element name="OtherEntries"	type="tns:OtherEntriesType"	minOccurs="0" maxOccurs="1"/>
+			</sequence>
+			<sequence minOccurs="1" maxOccurs="1">
+				<element name="ArrayEntry" 			type="tns:ArrayEntryType"			minOccurs="0" maxOccurs="unbounded"/>
+				<element name="OtherArrayEntries"	type="tns:OtherArrayEntriesType"	minOccurs="0" maxOccurs="1"/>
+			</sequence>
+			<sequence minOccurs="1" maxOccurs="1">
+				<element name="StructEntry"			type="tns:StructEntryType"			minOccurs="0" maxOccurs="unbounded"/>
+				<element name="OtherStructEntries"	type="tns:OtherStructEntriesType"	minOccurs="0" maxOccurs="1"/>
+			</sequence>
+			<sequence minOccurs="1" maxOccurs="1">
+				<element name="UnionEntry"			type="tns:UnionEntryType"			minOccurs="0" maxOccurs="unbounded"/>
+				<element name="OtherUnionEntries"	type="tns:OtherUnionEntriesType"	minOccurs="0" maxOccurs="1"/>
+			</sequence>
+		</choice>		
+	</group>
+	
+	<attributeGroup name="CommonEntryAttributesGroup">
+		<attribute name="index" use="optional"/>
+	</attributeGroup>
+	
+	<complexType name="EntryType">
+		<attributeGroup ref="tns:CommonEntryAttributesGroup"/>
+		<attributeGroup ref="tns:SimpleElementAttributesGroup"/>
+	</complexType>
+	
+	<complexType name="ArrayEntryType">
+		<group ref="tns:ArrayElementContent"/>
+		<attributeGroup ref="tns:CommonEntryAttributesGroup"/>
+		<attributeGroup ref="tns:ArrayElementAttributesGroup"/>
+	</complexType>
+	<complexType name="StructEntryType">
+		<sequence maxOccurs="unbounded">
+			<group ref="tns:StructElementContent"/>
+		</sequence>
+		<attributeGroup ref="tns:CommonEntryAttributesGroup"/>
+	</complexType>
+	<complexType name="UnionEntryType">
+		<attributeGroup ref="tns:CommonEntryAttributesGroup"/>
+		<attributeGroup ref="tns:UnionElementAttributesGroup"/>
+	</complexType>	
+	
+	<complexType name="OtherEntriesType">
+		<attributeGroup ref="tns:SimpleElementAttributesGroup"/>
+	</complexType>
+	<complexType name="OtherArrayEntriesType">
+		<group ref="tns:ArrayElementContent"/>
+		<attributeGroup ref="tns:ArrayElementAttributesGroup"/>
+	</complexType>
+	<complexType name="OtherStructEntriesType">
+		<sequence maxOccurs="unbounded">
+			<group ref="tns:StructElementContent"/>
+		</sequence>
+	</complexType>
+	<complexType name="OtherUnionEntriesType">
+		<attributeGroup ref="tns:UnionElementAttributesGroup"/>
+	</complexType>
+	
+	<attributeGroup name="CommonFieldAttributesGroup">
+		<attribute name="name" type="tns:NameType" use="required"/>
+	</attributeGroup>
+	
+	<complexType name="FieldType">
+		<attributeGroup ref="tns:CommonFieldAttributesGroup"/>
+		<attributeGroup ref="tns:SimpleElementAttributesGroup"/>
+	</complexType>
+	<complexType name="ArrayFieldType">
+		<group ref="tns:ArrayElementContent"/>
+		<attributeGroup ref="tns:CommonFieldAttributesGroup"/>
+		<attributeGroup ref="tns:ArrayElementAttributesGroup"/>
+	</complexType>
+	<complexType name="StructFieldType">
+		<sequence maxOccurs="unbounded">
+			<group ref="tns:StructElementContent"/>
+		</sequence>
+		<attributeGroup ref="tns:CommonFieldAttributesGroup"/>
+	</complexType>
+	<complexType name="UnionFieldType">
+		<attributeGroup ref="tns:CommonFieldAttributesGroup"/>
+		<attributeGroup ref="tns:UnionElementAttributesGroup"/>
+	</complexType>
+
+</schema>

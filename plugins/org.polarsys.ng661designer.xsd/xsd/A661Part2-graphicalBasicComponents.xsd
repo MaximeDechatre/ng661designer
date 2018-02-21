@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+	
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-capacities.xsd" />
+	<include schemaLocation="A661Part2-treePrimitives.xsd" />
+	<include schemaLocation="A661Part2-graphicalPrimitives.xsd"/>
+
+	<annotation>
+		<documentation xml:lang="en">This Schema defines all the graphical basic components available in ARINC 661 Part 2.</documentation>
+	</annotation>
+	
+	<complexType name="ArcComponent">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:PaintFillCapacities" />
+		<attributeGroup ref="tns:PaintStrokeCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attributeGroup ref="tns:FilterCapacities" />
+		<attribute name="x" type="tns:PositionType" />
+		<attribute name="y" type="tns:PositionType" />
+		<attribute name="inboundAngle" type="tns:AngleType" />
+		<attribute name="angle" type="tns:AngleType" />
+		<attribute name="radius" type="tns:DistanceType" />
+	</complexType>
+
+	<complexType name="CrownComponent">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:PaintFillCapacities" />
+		<attributeGroup ref="tns:PaintStrokeCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attributeGroup ref="tns:FilterCapacities" />
+		<attribute name="x" type="tns:PositionType" />
+		<attribute name="y" type="tns:PositionType" />
+		<attribute name="outerRadius" type="tns:DistanceType" />
+		<attribute name="innerRadius" type="tns:DistanceType" />
+	</complexType>
+
+	<complexType name="PolarLineComponent">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:PaintStrokeCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attributeGroup ref="tns:FilterCapacities" />
+		<attribute name="x1" type="tns:PositionType" />
+		<attribute name="y1" type="tns:PositionType" />
+		<attribute name="r" type="tns:DistanceType" />
+		<attribute name="angle" type="tns:AngleType" />
+	</complexType>
+	
+</schema>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:scxml="http://www.w3.org/2005/07/scxml"
+	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+	targetNamespace="http://www.w3.org/2005/07/scxml"
+	elementFormDefault="qualified">
+	
+	<!-- id, initial and target attributes type -->
+	<xsd:simpleType name="scxml.id.type">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The type is used to specify or refer to an identifier.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="128"/>
+			<xsd:minLength value="1"/>
+			<xsd:pattern value="[_a-zA-Z][_0-9a-zA-Z]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<!--  scxml root node -->
+	<xsd:element name="scxml" type="scxml:scxml.scxml.type">
+		<!-- Should be put in upper XSD to check ID uniqueness within the component and not only within the scxml tree -->
+		<xsd:unique name="scXmlAllIdUniqueness">
+			<xsd:selector xpath=".//*"/>
+			<xsd:field xpath="@id"/>
+		</xsd:unique>
+		
+		<xsd:key name="scXmlChildrenIdKey">
+			<xsd:selector xpath="*"/>
+			<xsd:field xpath="@id"/>
+		</xsd:key>
+		
+		<xsd:keyref name="scXmlInitialKeyRef" refer="scxml:scXmlChildrenIdKey">
+			<xsd:selector xpath=".//*"/>
+			<xsd:field xpath="@initial"/>
+		</xsd:keyref>
+
+		<xsd:keyref name="scXmlTargetKeyRef" refer="scxml:scXmlChildrenIdKey">
+			<xsd:selector xpath=".//*"/>
+			<xsd:field xpath="@target"/>
+		</xsd:keyref>
+	</xsd:element>
+	
+	<xsd:complexType name="scxml.scxml.type">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				The type is used to specify the global scxml node.
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="state" type="scxml:scxml.state.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="script" type="scxml:scxml.script.type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="initial" type="scxml:scxml.id.type"/>
+		<xsd:attribute name="name" type="xsd:NMTOKEN"/>
+		<xsd:attribute name="version" type="xsd:decimal" use="required"/>
+	</xsd:complexType>
+	
+	<!-- state -->
+	<xsd:complexType name="scxml.state.type">
+		<xsd:sequence>
+			<xsd:element name="onentry" type="scxml:scxml.onexecute.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="onexit" type="scxml:scxml.onexecute.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="transition" type="scxml:scxml.transition.type" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="state" type="scxml:scxml.state.type" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="id" type="scxml:scxml.id.type" use="required"/>
+		<xsd:attribute name="initial" type="scxml:scxml.id.type"/>
+	</xsd:complexType>
+	
+	<!-- transition -->
+	<xsd:complexType name="scxml.transition.type">
+		<xsd:sequence>
+			<xsd:group ref="scxml:scxml.executablecontent" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="event" type="scxml:scxml.transition.event.type" use="required"/>
+		<xsd:attribute name="cond" type="scxml:scxml.transition.cond.type" use="optional" default="true"/>
+		<xsd:attribute name="target" type="scxml:scxml.id.type" use="required"/>
+		<xsd:attribute name="type" type="scxml:scxml.transition.type.type" use="optional" default="external"/>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="scxml.transition.type.type">
+		<xsd:annotation>
+			<xsd:documentation>
+            The type of the transition i.e. internal or external. 
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:NMTOKEN">
+			<xsd:enumeration value="internal"/>
+			<xsd:enumeration value="external"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="scxml.transition.event.type">
+		<xsd:annotation>
+			<xsd:documentation>    Custom datatype for the event attribute in SCXML based on
+                xsd:token.    Example legal values:     *     foo     foo.bar     foo.*
+                foo.bar.*     foo bar baz     foo.bar bar.* baz.foo.*
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:token">
+			<xsd:pattern value="\.?\*|(\i|\d)+(\.(\i|\d)+)*(\.\*)?(\s(\i|\d)+(\.(\i|\d)+)*(\.\*)?)*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:simpleType name="scxml.transition.cond.type">
+		<xsd:annotation>
+			<xsd:documentation>       Conditional language is expression        which must evaluate
+                to Boolean True or False.        The expression language must define In(stateID)
+                as a valid expression.             </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	
+	<!-- onentry and onexit -->
+	<xsd:complexType name="scxml.onexecute.type">
+		<xsd:sequence>
+			<xsd:group ref="scxml:scxml.executablecontent" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attributeGroup ref="scxml:scxml.extra.attribs"/>
+	</xsd:complexType>
+	
+	<xsd:group name="scxml.executablecontent">
+		<xsd:choice>
+			<xsd:group ref="scxml:scxml.extra.content" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element name="script" type="scxml:scxml.script.type"/>
+		</xsd:choice>
+	</xsd:group>
+	
+	<!-- script -->
+	<xsd:complexType name="scxml.script.type" mixed="true">
+		<xsd:sequence>
+			<xsd:group ref="scxml:scxml.extra.content" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="src" type="scxml:scxml.script.source.type"/>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="scxml.script.source.type">
+		<xsd:annotation>
+			<xsd:documentation>             The xsd:anyURI type and thus URI references in SCXML
+                documents may contain a wide array of international             characters.
+                Implementers should reference RFC 3987 and             the "Character Model for the
+                World Wide Web 1.0:             Resource Identifiers" in order to provide
+                appropriate             support for these characters in VoiceXML documents and
+                when processing values of this type or mapping them to             URIs.
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:anyURI"/>
+	</xsd:simpleType>
+		
+	<!-- extra content and attributes -->
+	<xsd:group name="scxml.extra.content">
+		<xsd:annotation>
+			<xsd:documentation>     group allowing elements from other namespaces
+            </xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:group>
+	
+	<xsd:attributeGroup name="scxml.extra.attribs">
+		<xsd:annotation>
+			<xsd:documentation>group allowing attributes from other namespaces</xsd:documentation>
+		</xsd:annotation>
+		<xsd:anyAttribute namespace="##other" processContents="lax"/>
+	</xsd:attributeGroup>
+	
+</xsd:schema>

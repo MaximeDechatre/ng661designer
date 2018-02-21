@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+	
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-capacities.xsd" />
+	<include schemaLocation="A661Part2-treePrimitives.xsd" />
+	<include schemaLocation="A661Part2-pathPrimitive.xsd"/>
+	<include schemaLocation="A661Part2-textPrimitive.xsd"/>
+
+	<annotation>
+		<documentation xml:lang="en">This Schema contains all the graphical primitives available in ARINC 661 Part 2.
+		This does not include the graphical containers and the graphical basic components. 
+		The Path primitive and the Text primitive are defined in other files.
+		</documentation>
+	</annotation>
+	
+	<complexType name="RectPrimitive">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<group ref="tns:ChildElements" />
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:PaintFillCapacities" />
+		<attributeGroup ref="tns:PaintStrokeCapacities" />
+		<attributeGroup ref="tns:PaintGradientCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attributeGroup ref="tns:FilterCapacities" />
+		<attribute name="x" 		type="tns:PositionType"	default="0"	/>
+		<attribute name="y" 		type="tns:PositionType" default="0"	/>
+		<attribute name="width" 	type="tns:DistanceType" />
+		<attribute name="height" 	type="tns:DistanceType" />
+		<attribute name="rx" 		type="tns:DistanceType" />
+		<attribute name="ry" 		type="tns:DistanceType" />
+	</complexType>
+
+	<complexType name="CirclePrimitive">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<group ref="tns:ChildElements" />
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:PaintFillCapacities" />
+		<attributeGroup ref="tns:PaintStrokeCapacities" />
+		<attributeGroup ref="tns:PaintGradientCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attributeGroup ref="tns:FilterCapacities" />
+		<attribute name="cx"	type="tns:PositionType"	default="0" />
+		<attribute name="cy" 	type="tns:PositionType"	default="0" />
+		<attribute name="r" 	type="tns:DistanceType"	default="0" />
+	</complexType>
+
+	<complexType name="EllipsePrimitive">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<group ref="tns:ChildElements" />
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:PaintFillCapacities" />
+		<attributeGroup ref="tns:PaintStrokeCapacities" />
+		<attributeGroup ref="tns:PaintGradientCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attributeGroup ref="tns:FilterCapacities" />
+		<attribute name="cx" type="tns:PositionType" default="0" />
+		<attribute name="cy" type="tns:PositionType" default="0" />
+		<attribute name="rx" type="tns:DistanceType" />
+		<attribute name="ry" type="tns:DistanceType" />
+	</complexType>
+
+	<complexType name="LinePrimitive">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:PaintStrokeCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attributeGroup ref="tns:FilterCapacities" />
+		<attribute name="x1" type="tns:PositionType" default="0" />
+		<attribute name="y1" type="tns:PositionType" default="0" />
+		<attribute name="x2" type="tns:PositionType" default="0" />
+		<attribute name="y2" type="tns:PositionType" default="0" />
+	</complexType>
+
+	<complexType name="PolylinePrimitive">
+		<sequence>
+			<element name="points" type="tns:PositionListType"/>
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:PaintStrokeCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attributeGroup ref="tns:FilterCapacities" />
+	</complexType>
+
+	<complexType name="PolygonPrimitive">
+		<sequence>
+			<element name="points" type="tns:PositionListType"/>
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attributeGroup ref="tns:PaintFillCapacities" />
+		<attributeGroup ref="tns:PaintStrokeCapacities" />
+		<attributeGroup ref="tns:PaintGradientCapacities" />
+		<attributeGroup ref="tns:GraphicsCapacities" />
+		<attributeGroup ref="tns:FilterCapacities" />
+	</complexType>
+
+	<complexType name="ImagePrimitive">
+		<sequence minOccurs="0" maxOccurs="unbounded">
+			<group ref="tns:ChildElements" />
+		</sequence>
+		<attributeGroup ref="tns:CoreCapacities" 		/>
+		<attributeGroup ref="tns:GraphicsCapacities" 	/>
+		<attributeGroup ref="tns:FilterCapacities" 		/>
+		<attributeGroup ref="tns:ImageAlignement" 		/>
+		<attribute name="x" 			type="tns:PositionType"	default="0"	/>
+		<attribute name="y" 			type="tns:PositionType"	default="0"	/>
+		<attribute name="width" 		type="tns:DistanceType" />
+		<attribute name="height" 		type="tns:DistanceType" />
+		<attribute name="source" 		type="tns:ImageType" 	/>
+		<attribute name="aspectRatio"	default="none"	>
+			<simpleType>
+				<restriction base="tns:StringType">
+					<enumeration value="none"/>
+					<enumeration value="meet"/>
+					<enumeration value="slice"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</complexType>
+	
+	<attributeGroup name="ImageAlignement">
+		<attribute name="alignment" default="topLeft" >
+			<simpleType >
+				<restriction base="tns:StringType">
+					<enumeration value="topLeft"/>
+					<enumeration value="topCenter"/>
+					<enumeration value="topRight"/>
+					<enumeration value="centerLeft"/>
+					<enumeration value="center"/>
+					<enumeration value="centerRight"/>
+					<enumeration value="bottomLeft"/>
+					<enumeration value="bottomCenter"/>
+					<enumeration value="bottomRight"/>
+				</restriction>
+			</simpleType>
+		</attribute>
+	</attributeGroup>
+
+</schema>

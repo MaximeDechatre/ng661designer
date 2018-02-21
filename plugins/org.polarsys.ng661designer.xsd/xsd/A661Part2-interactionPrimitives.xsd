@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+	
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-capacities.xsd" />
+	<include schemaLocation="A661Part2-treePrimitives.xsd" />
+
+	<annotation>
+		<documentation xml:lang="en">This Schema contains all the interaction primitives available in ARINC 661 Part 2</documentation>
+	</annotation>
+	
+	<complexType name="PointerAreaPrimitive">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attribute name="x" 				type="tns:PositionType"	default="0" 	/>
+		<attribute name="y" 				type="tns:PositionType" default="0" 	/>
+		<attribute name="width" 			type="tns:DistanceType" />
+		<attribute name="height" 			type="tns:DistanceType" />
+		<attribute name="passThrough" 		type="tns:BooleanType" 	default="false" />
+		<attribute name="trackOutside" 		type="tns:BooleanType" 	default="false" />
+		<attribute name="preventStealing" 	type="tns:BooleanType" 	default="true"	/>
+		<attribute name="acceptedButtons"	type="tns:StringType" 	default="0" 	/>
+		<attribute name="cursor"			type="tns:ObjectType" 	/>
+	</complexType>
+	
+	<complexType name="PointerGestureAreaPrimitive">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attribute name="x" 				type="tns:PositionType"	default="0" 	/>
+		<attribute name="y" 				type="tns:PositionType" default="0" 	/>
+		<attribute name="width" 			type="tns:DistanceType" />
+		<attribute name="height" 			type="tns:DistanceType" />
+		<attribute name="trackOutside" 		type="tns:BooleanType" 	default="false" />
+		<attribute name="acceptedButtons"	type="tns:StringType" 	default="0" 	/>
+		<attribute name="acceptedGesture"	type="tns:StringType" 	default="all"	/>
+		<attribute name="cursor"			type="tns:ObjectType" 	/>
+	</complexType>
+
+	<complexType name="TouchAreaPrimitive">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attribute name="x" 					type="tns:PositionType"	default="0" 	/>
+		<attribute name="y" 					type="tns:PositionType" default="0" 	/>
+		<attribute name="width" 				type="tns:DistanceType" />
+		<attribute name="height" 				type="tns:DistanceType" />
+		<attribute name="preventStealing" 		type="tns:BooleanType" 	default="true"	/>
+		<attribute name="passThrough" 			type="tns:BooleanType" 	default="false" />
+		<attribute name="minimumTouchPoints"	type="tns:IntegerType" 	default="0" 	/>
+		<attribute name="maximumTouchPoints"	type="tns:IntegerType" 	default="20"	/>
+	</complexType>
+
+	<complexType name="GestureAreaPrimitive">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attribute name="x" 				type="tns:PositionType"	default="0" 	/>
+		<attribute name="y" 				type="tns:PositionType" default="0" 	/>
+		<attribute name="width" 			type="tns:DistanceType" />
+		<attribute name="height" 			type="tns:DistanceType" />
+		<attribute name="preventStealing" 	type="tns:BooleanType" 	default="true"	/>
+		<attribute name="trackOutside" 		type="tns:BooleanType" 	default="false" />
+		<attribute name="acceptedGesture"	type="tns:StringType" 	default="all"	/>
+	</complexType>
+
+	<complexType name="KeyboardInputPrimitive">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attribute name="focus" 		type="tns:BooleanType" 	default="false"	/>
+		<attribute name="passThrough"	type="tns:BooleanType" 	default="false" />
+		<attribute name="needFocus" 	type="tns:BooleanType" 	default="false" />
+	</complexType>
+
+	<complexType name="ScrollWheelInputPrimitive">
+		<attributeGroup ref="tns:CoreCapacities" />
+		<attribute name="focus" 		type="tns:BooleanType" 	default="false"	/>
+		<attribute name="passThrough"	type="tns:BooleanType" 	default="false" />
+		<attribute name="needFocus" 	type="tns:BooleanType" 	default="false" />
+	</complexType>
+
+</schema>

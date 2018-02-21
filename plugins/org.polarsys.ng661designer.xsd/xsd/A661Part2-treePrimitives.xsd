@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema targetNamespace="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/A661Part2" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-capacities.xsd" />
+	<include schemaLocation="A661Part2-graphicalContainers.xsd" />
+	<include schemaLocation="A661Part2-graphicalPrimitives.xsd" />
+	<include schemaLocation="A661Part2-graphicalBasicComponents.xsd" />
+	<include schemaLocation="A661Part2-interactionPrimitives.xsd" />
+
+	<annotation>
+		<documentation xml:lang="en">This Schema contains all the primitives and basic components available in ARINC 661 Part 2</documentation>
+	</annotation>
+
+	<group name="GraphicPrimitives">
+		<choice>
+			<element name="Group" 				type="tns:GroupPrimitive" 				/>
+			<element name="TransformGroup"		type="tns:TransformGroupPrimitive"		/>
+			<element name="Replicate"			type="tns:ReplicatePrimitive"			/>
+			<element name="Children" 			type="tns:ChildPrimitive" 				/>
+			<element name="SwitchNode" 			type="tns:SwitchNodePrimitive" 			/>
+			<element name="ClippingContainer"	type="tns:ClippingContainerPrimitive"	/>
+			<element name="Rectangle" 			type="tns:RectPrimitive" 				/>
+			<element name="Circle" 				type="tns:CirclePrimitive" 				/>
+			<element name="Ellipse" 			type="tns:EllipsePrimitive" 			/>
+			<element name="Line" 				type="tns:LinePrimitive"				/>
+			<element name="Polyline" 			type="tns:PolylinePrimitive"			/>
+			<element name="Polygon" 			type="tns:PolygonPrimitive" 			/>
+			<element name="Path" 				type="tns:PathPrimitive" 				/>
+			<element name="Image" 				type="tns:ImagePrimitive" 				/>
+			<element name="SimpleText" 			type="tns:SimpleTextPrimitive" 			/>
+		</choice>
+	</group>
+
+	<group name="GraphicBasicComponents">
+		<choice>
+			<element name="Arc" 		type="tns:ArcComponent" 		/>
+			<element name="Crown" 		type="tns:CrownComponent" 		/>
+			<element name="PolarLine"	type="tns:PolarLineComponent" 	/>
+		</choice>
+	</group>
+
+	<group name="InteractionPrimitives">
+		<choice>
+			<element name="PointerArea" 		type="tns:PointerAreaPrimitive" 		/>
+			<element name="PointerGestureArea" 	type="tns:PointerGestureAreaPrimitive" 	/>
+			<element name="TouchArea" 			type="tns:TouchAreaPrimitive" 			/>
+			<element name="GestureArea" 		type="tns:GestureAreaPrimitive" 		/>
+			<element name="KeyboardInput" 		type="tns:KeyboardInputPrimitive"		/>
+			<element name="ScrollWheelInput"	type="tns:ScrollWheelInputPrimitive" 	/>
+		</choice>
+	</group>
+
+	<group name="ChildElements">
+		<choice>
+			<group ref="tns:GraphicPrimitives" />
+			<group ref="tns:GraphicBasicComponents" />
+			<group ref="tns:InteractionPrimitives" />
+			<any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="1">	
+				<annotation>
+					<documentation>To allow user defined components use in the representation components tree.</documentation>
+				</annotation>
+			</any>
+		</choice>
+	</group>
+
+</schema>

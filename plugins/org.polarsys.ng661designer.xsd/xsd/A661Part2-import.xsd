@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/A661Part2" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" xmlns:scxml="http://www.w3.org/2005/07/scxml">
+
+	<include schemaLocation="A661Part2-types.xsd" />
+	<include schemaLocation="A661Part2-definitions.xsd" />
+
+	<annotation>
+		<documentation xml:lang="en">This Schema define the import types used in both definition, interface and tree sections.</documentation>
+	</annotation>
+	
+	<complexType name="ImportType">
+		<attribute name="file" type="anyURI" use="required" />
+	</complexType>
+
+</schema>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+
+	<include schemaLocation="A661Part2-types.xsd" />
+
+	<annotation>
+		<documentation xml:lang="en">This Schema defines all the common capacities for the different primitives provided by ARINC 661 Part 2.</documentation>
+	</annotation>
+	
+	<attributeGroup name="CoreCapacities">
+		<attribute name="id" 				type="tns:NameType" 	use="required" />
+		<attribute name="visible" 			type="tns:BooleanType" 	default="true" />
+		<attribute name="inheritedVisible" 	type="tns:BooleanType" 	default="true" />
+		<attribute name="enable" 			type="tns:BooleanType" 	default="true" />
+		<attribute name="inheritedEnable" 	type="tns:BooleanType" 	default="true" />
+		<attribute name="blocked" 			type="tns:BooleanType" 	default="true" />
+		<attribute name="inheritedBlocked" 	type="tns:BooleanType" 	default="true" />
+	</attributeGroup>
+
+	<attributeGroup name="PaintFillCapacities">
+		<attribute name="fill" 			type="tns:ColorType" 	default="none" 		/>
+		<!-- It could be relevant to have a RuleType for both ClipRule and FillRule -->
+		<attribute name="fillRule" 		default="nonzero" 	>
+			<simpleType>
+				<restriction base="tns:StringType">
+					<enumeration value="nonzero" />
+					<enumeration value="evenodd" />
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="fillOpacity" 	type="tns:OpacityType" 	default="1.0" 		/>
+	</attributeGroup>
+
+	<attributeGroup name="PaintStrokeCapacities">
+		<attribute name="stroke" 			type="tns:ColorType" 	default="white" />
+		<attribute name="strokewidth" 		type="tns:DistanceType"	default="1.0" 	/>
+		<attribute name="strokeLinecap" 	default="butt"	>
+			<simpleType>
+				<restriction base="tns:StringType">
+					<enumeration value="butt"	/>
+					<enumeration value="round" 	/>
+					<enumeration value="square" />
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="strokeLinejoin"	default="miter" >
+			<simpleType>
+				<restriction base="tns:StringType">
+					<enumeration value="miter"	/>
+					<enumeration value="round" 	/>
+					<enumeration value="bevel" />
+				</restriction>
+			</simpleType>
+		</attribute>
+		<attribute name="strokeMiterlimit" 	type="tns:RealType" 	default="4.0" 	/>
+		<attribute name="strokeDasharray" 	type="tns:StippleType" 	default="none" 	/>
+		<attribute name="strokeDashoffset" 	type="tns:DistanceType" default="0" 	/>
+		<attribute name="strokeOpacity" 	type="tns:OpacityType" 	default="1.0" 	/>
+	</attributeGroup>
+
+	<attributeGroup name="PaintGradientCapacities">
+		<!-- PLACEHOLDER FOR GRADIENT CAPACITIES -->
+	</attributeGroup>
+
+	<attributeGroup name="GraphicsCapacities">
+		<attribute name="drawingPriority" 	type="tns:ZIndexType"	default="0" />
+	</attributeGroup>
+
+	<attributeGroup name="FilterCapacities">
+		<!-- PLACEHOLDER FOR FILTER CAPACITIES -->
+	</attributeGroup>
+
+	<group name="DecorationCapacities">
+		<sequence>
+			<element name="ReverseVideo"	type="tns:ReverseVideoProperties"	minOccurs="0" maxOccurs="1"/>
+			<element name="Frame"			type="tns:FrameProperties"			minOccurs="0" maxOccurs="1"/>
+			<element name="Underline"		type="tns:UnderlineProperties"		minOccurs="0" maxOccurs="1"/>
+			<element name="StrikeThrough"	type="tns:StrikeThroughProperties"	minOccurs="0" maxOccurs="1"/>
+		</sequence>
+	</group>
+	
+	<complexType name="ReverseVideoProperties">
+		<attribute name="active"			type="tns:BooleanType"	/>
+		<attribute name="ascenderMargin"	type="tns:PositionType"	/>
+		<attribute name="descenderMargin"	type="tns:PositionType"	/>
+		<attribute name="startMargin"		type="tns:PositionType"	/>
+		<attribute name="endMargin"			type="tns:PositionType"	/>
+	</complexType>
+	
+	<complexType name="FrameProperties">
+		<attribute name="active"			type="tns:BooleanType"	/>
+		<attribute name="ascenderMargin"	type="tns:PositionType"	/>
+		<attribute name="descenderMargin"	type="tns:PositionType"	/>
+		<attribute name="startMargin"		type="tns:PositionType"	/>
+		<attribute name="endMargin"			type="tns:PositionType"	/>
+		<attribute name="strokeWidth"		type="tns:DistanceType"	/>
+	</complexType>
+	
+	<complexType name="UnderlineProperties">
+		<attribute name="active"			type="tns:BooleanType"	/>
+		<attribute name="distance"			type="tns:DistanceType"	/>
+		<attribute name="strokeWidth"		type="tns:DistanceType"	/>
+	</complexType>
+	
+	<complexType name="StrikeThroughProperties">
+		<attribute name="active"			type="tns:BooleanType"	/>
+		<attribute name="distance"			type="tns:DistanceType"	/>
+		<attribute name="strokeWidth"		type="tns:DistanceType"	/>
+	</complexType>
+	
+</schema>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<!--
+ Copyright (c) 2015, 2018 Airbus and the NG661designer project contributors.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+ Contributors:
+     Obeo - initial API and implementation
+-->
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="NG661Designer"
+            id="org.polarsys.ng661designer.convert.commands.category">
+      </category>
+      <command
+            name="Convert XSD To Ecore and Genmodel"
+            categoryId="org.polarsys.ng661designer.convert.commands.category"
+            id="org.polarsys.ng661designer.convert.commands.convertXSDToGenmodelCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+       <handler
+            commandId="org.polarsys.ng661designer.convert.commands.convertXSDToGenmodelCommand"
+            class="org.polarsys.ng661designer.convert.handlers.ConvertXSDToGenmodelHandler">
+          <activeWhen>
+             <test
+                   forcePluginActivation="true"
+                   property="org.polarsys.ng661designer.convert.XSDFilePropertyTester">
+             </test>
+          </activeWhen>
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <menu
+               label="NG661Designer"
+               id="org.polarsys.ng661designer.convert.menus.convertXSDMenu">
+            <command
+                  commandId="org.polarsys.ng661designer.convert.commands.convertXSDToGenmodelCommand"
+                  id="org.polarsys.ng661designer.convert.menus.convertXSDToGenmodelCommand">
+               <visibleWhen
+                     checkEnabled="false">
+                  <test
+                        property="org.polarsys.ng661designer.convert.XSDFilePropertyTester">
+                  </test>
+               </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="org.polarsys.ng661designer.convert.propertyTester.XSDFilePropertyTester"
+            id="org.polarsys.ng661designer.convert.XSDFilePropertyTester"
+            namespace="org.polarsys.ng661designer.convert"
+            properties="XSDFilePropertyTester"
+            type="java.lang.Object">
+      </propertyTester>
+   </extension>
+
+</plugin>

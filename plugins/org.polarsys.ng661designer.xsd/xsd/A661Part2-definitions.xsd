@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:scxml="http://www.w3.org/2005/07/scxml" xmlns:tns="http://www.example.org/A661Part2" elementFormDefault="qualified" targetNamespace="http://www.example.org/A661Part2">
+
+	<include schemaLocation="A661Part2-types.xsd" />
+	
+	<annotation>
+		<documentation xml:lang="en">This Schema defines the Definitions type for ARINC 661 Part 2</documentation>
+	</annotation>
+		
+	<complexType name="FieldDefinitionAbstractType" abstract="true">
+		<attribute name="name" type="string" use="required" />
+	</complexType>
+	
+	<annotation>
+		<documentation xml:lang="en">To define a new field consists of defining a name and a type.
+		And optionally the maximum size in case of string type use.
+		</documentation>
+	</annotation>
+	<complexType name="FieldDefinitionType">
+		<complexContent>
+			<extension base="tns:FieldDefinitionAbstractType">
+				<attribute name="type" type="string" use="required" />	
+				<attribute name="maxStringLength" type="nonNegativeInteger" use="optional">
+					<annotation>
+						<documentation>Used for strings</documentation>
+					</annotation>
+				</attribute>
+			</extension>			
+		</complexContent>
+	</complexType>	
+	
+	<group name="StructDefinitionContent">
+		<sequence>
+			<element name="FieldDefinition" type="tns:FieldDefinitionType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="StructFieldDefinition" type="tns:FieldDefinitionType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="ArrayFieldDefinition" type="tns:ArrayFieldDefinitionType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="EnumFieldDefinition" type="tns:FieldDefinitionType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="UnionFieldDefinition" type="tns:FieldDefinitionType" minOccurs="0" maxOccurs="unbounded" />
+		</sequence>
+	</group>
+	
+	<annotation>
+		<documentation xml:lang="en">To define a new structure type consists of defining a sequence of one or more fields.
+		</documentation>
+	</annotation>
+	<complexType name="StructDefinitionType">
+		<complexContent>
+			<extension base="tns:TypeDefinitionAbstractType">
+				<sequence>
+					<group ref="tns:StructDefinitionContent" minOccurs="1" maxOccurs="unbounded" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+		
+	
+	<complexType name="TypeDefinitionAbstractType" abstract="true">
+		<attribute name="name" type="tns:TypeType" use="required"/>
+	</complexType>
+
+	
+	<annotation>
+		<documentation xml:lang="en">To define a new enumeration just consists of defining a value and optionally an index.
+		</documentation>
+	</annotation>
+	<complexType name="EnumerationType">
+		<attribute name="value" type="string" use="required" />
+		<attribute name="index" type="nonNegativeInteger" use="optional" />
+	</complexType>
+
+	<annotation>
+		<documentation xml:lang="en">To define a new enum type consists of defining a name and the sequence of enumerations.
+		</documentation>
+	</annotation>
+	<complexType name="EnumDefinitionType">
+		<complexContent>
+			<extension base="tns:TypeDefinitionAbstractType">
+				<sequence>
+					<element name="Enumeration" type="tns:EnumerationType" minOccurs="1" maxOccurs="unbounded" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<complexType name="ArrayFieldDefinitionType">
+		<complexContent>
+			<extension base="tns:FieldDefinitionAbstractType">
+				<attribute name="entriesType" type="string" use="required" />
+				<attribute name="maxStringLength" type="nonNegativeInteger" use="optional">
+					<annotation>
+						<documentation>Used for strings</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<annotation>
+		<documentation xml:lang="en">To define a new array type consists of defining a name and a type for each entry of the future array.
+		The capacity of the array is defined when it will be instantiated for a property.
+		When the type requires the definition of the maximum size for one entry (like for arrays of strings), a maxEntrySize attribute shall be set. 
+		</documentation>
+	</annotation>
+	<complexType name="ArrayDefinitionType">
+		<complexContent>
+			<extension base="tns:TypeDefinitionAbstractType">
+				<attribute name="entryType" type="string" use="required" />
+				<attribute name="maxStringLength" type="nonNegativeInteger" use="optional">
+					<annotation>
+						<documentation>Used for strings</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<annotation>
+		<documentation xml:lang="en">Inside an union definition, to define an alternative type consists of defining
+		the name of the alternative and the associated type.
+		When the type requires the definition of the maximum size for one entry (like for arrays of strings), a maxEntrySize attribute shall be set.
+		</documentation>
+	</annotation>
+	<complexType name="TypeAlternativeType">
+		<attribute name="name" type="string" use="required" />
+		<attribute name="type" type="string" use="required" />
+		<attribute name="maxStringLength" type="nonNegativeInteger" use="optional">
+			<annotation>
+				<documentation>Used for strings</documentation>
+			</annotation>
+		</attribute>
+	</complexType>
+	
+	<annotation>
+		<documentation xml:lang="en">To define a new union type consists of defining a name
+		for this union type and the list of alternative types</documentation>
+	</annotation>
+	<complexType name="UnionDefinitionType">
+		<complexContent>
+			<extension base="tns:TypeDefinitionAbstractType">
+				<sequence minOccurs="1" maxOccurs="unbounded">
+					<element name="TypeAlternative" type="tns:TypeAlternativeType" minOccurs="2" maxOccurs="unbounded" />
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	
+	<annotation>
+		<documentation xml:lang="en">The types definitions section consists of defining a sequence of one or more structures, enums, arrays or unions.
+		Inside the definitions section, the names of the structures, enums, arrays and unions shall be unique.
+		Inside a structure, the fields names shall be unique.
+		Inside an enumerate, the values of the enumerations shall be unique.
+		Inside an enumerate, the indexes of the enumerations shall be unique.
+		Inside an union, the alternative type names shall be unique.
+		Inside an union, the alternative types shall be unique.
+		</documentation>
+	</annotation>	
+	<complexType name="DefinitionsType">
+		<sequence minOccurs="1" maxOccurs="unbounded">
+			<element name="StructDefinition" type="tns:StructDefinitionType" minOccurs="0" maxOccurs="unbounded">
+				<unique name="AllFieldsNameUniqueness">
+					<selector xpath="tns:FieldDefinition|tns:StructFieldDefinition|tns:ArrayFieldDefinition|tns:UnionFieldDefinition" />
+					<field xpath="@name" />
+				</unique>
+				<key name="FieldsNameKey">
+					<selector xpath="tns:FieldDefinition" />
+					<field xpath="@name" />
+				</key>
+				<key name="StructFieldsNameKey">
+					<selector xpath="tns:StructFieldDefinition" />
+					<field xpath="@name" />
+				</key>
+				<key name="ArrayFieldsNameKey">
+					<selector xpath="tns:ArrayFieldDefinition" />
+					<field xpath="@name" />
+				</key>
+				<key name="EnumFieldsNameKey">
+					<selector xpath="tns:EnumFieldDefinition" />
+					<field xpath="@name" />
+				</key>
+				<key name="UnionFieldsNameKey">
+					<selector xpath="tns:UnionFieldDefinition" />
+					<field xpath="@name" />
+				</key>
+			</element>
+			<element name="EnumDefinition" type="tns:EnumDefinitionType" minOccurs="0" maxOccurs="unbounded">
+				<unique name="EnumerationValueKey">
+					<selector xpath="tns:Enumeration" />
+					<field xpath="@value" />
+				</unique>
+				<unique name="EnumerationIndexID">
+					<selector xpath="tns:Enumeration" />
+					<field xpath="@index" />
+				</unique>
+			</element>
+			<element name="ArrayDefinition" type="tns:ArrayDefinitionType" minOccurs="0" maxOccurs="unbounded" />
+			<element name="UnionDefinition" type="tns:UnionDefinitionType" minOccurs="0" maxOccurs="unbounded">
+				<unique name="TypeAlternativeTypeID">
+					<selector xpath="tns:TypeAlternative" />
+					<field xpath="@type" />
+				</unique>
+				<unique name="TypeAlternativeNameKey">
+					<selector xpath="tns:TypeAlternative" />
+					<field xpath="@name" />
+				</unique>
+			</element>
+			
+		</sequence>
+	</complexType>
+		
+</schema>
